@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "973893672817",
+    "firebase_url": "https://examesproject.firebaseio.com",
+    "project_id": "examesproject",
+    "storage_bucket": "examesproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973893672817:android:70336a0cd7bd7b07",
+        "android_client_info": {
+          "package_name": "com.kishan.exames"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973893672817-nmteuklmrfpch6skddfdndmu3ba09jof.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8XkzBW7nbal6I0MadFqH6EKo1QCHjX6M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973893672817-nmteuklmrfpch6skddfdndmu3ba09jof.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
