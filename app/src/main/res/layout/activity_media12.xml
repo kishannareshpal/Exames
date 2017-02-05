@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_media12"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.kishan.exames.media12Activity"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textSize="14sp"
+            android:textStyle="normal|bold|italic"
+            android:text="a sua média final da 12a Classe é:"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvResult12"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="normal|bold"
+            android:textColor="@color/very_light_grey"
+            tools:text="--"
+            android:text="--"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:focusable="true"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColorHint="@color/very_light_grey">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintMedia11"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:maxLength="2"
+                    android:textColorLink="@color/skinny_blue"
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:id="@+id/et11a12"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/very_light_grey">
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:hint="@string/hintMedia12"
+                    android:textStyle="normal|bold|italic"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/et12a12"
+                    android:maxLines="1"
+                    android:maxLength="2"
+                    android:textColorLink="@color/skinny_blue"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_height="match_parent"
+                android:layout_gravity="right">
+
+                <Button
+                    android:text="Calcular >"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btCalculate12"
+                    android:textStyle="normal|bold|italic"
+                    android:textAllCaps="false"
+                    android:layout_gravity="right"
+                    android:textColor="@color/white"
+                    tools:ignore="RtlHardcoded"
+                    android:backgroundTint="@color/dark_grey" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

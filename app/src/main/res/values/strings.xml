@@ -1,0 +1,180 @@
+<resources>
+    <string name="app_name">Exames</string>
+
+    <!--//MainActivity-->
+    <string name="WelcomeMsg">Ola, caro estudante.</string>
+    <string name="btGetStarted">Avançar</string>
+
+    <!--SelectionActivity-->
+    <string name="btExams">Exames</string>
+    <string name="btPautas">Médias</string>
+    <string name="tvQ1">O que procuras?</string>
+
+    <!--ExamesActivity-->
+    <string name="GradeHint">selecione a classe</string>
+    <string name="YearHint">selecione o ano</string>
+    <string name="SubjectHint">selecione a disciplina</string>
+    <string name="EpocaHint">selecione a época</string>
+    <string name="DownloadButton">Baixar</string>
+    <string name="Look">Ver</string>
+    <string name="try_again"><u><b><i>Tentar novamente. Clique aqui!</i></b></u></string>
+
+    <!--MediasActivity-->
+    <string name="Media10a">10a Classe</string>
+    <string name="Media12a">12a Classe</string>
+    <string name="tvQ2">Média anual da?</string>
+
+        <!--media10Activity-->
+        <string name="hindMedia8">insira a média anual da 8a Classe</string>
+        <string name="hindMedia9">insira a média anual da 9a Classe</string>
+        <string name="hindMedia10">insira a média anual da 10a Classe</string>
+
+
+        <!--media12Activity-->
+        <string name="tvInfo">Para calcular a média da 12a classe: <b>multiplicas por 2
+        a Média Anual da 12a Classe, e adicionas com a Média Anual da 11a Classe. E por fim,
+        divides o resultado por 3.</b></string>
+
+        <string name="hintMedia11">insira a média anual da 11a Classe</string>
+        <string name="hintMedia12">insira a média anual da 12a Classe</string>
+
+
+    <!--AboutActivity-->
+    <string name="about">Este aplicativo foi desenvolvido por dois Ex-Estudantes da Escola S.
+    Emília Daússe de Inhambane, com o objectivo de lhe facilitar na busca de exames anteriores.
+    Bons Estudos.</string>
+
+
+    <!--SPINNERS:-->
+    <!--YearSpinner-->
+
+    <!--ª-->
+    <string-array name="arAnos">
+        <item>...</item>
+        <item>20</item>
+    </string-array>
+
+
+    <!--GradeSpinner-->
+    <string-array name="arClasse">
+        <item>...</item>
+        <item>10a Classe</item>
+        <item>12a Classe</item>
+    </string-array>
+
+    <!--EpocaSpinner-->
+    <string-array name="arEpoca">
+        <item>...</item>
+        <item>1a Epoca</item>
+        <item>2a Epoca</item>
+
+    </string-array>
+
+
+    <!--SubjectSpinner-->
+    <string-array name="arDisciplina10">
+        <item>...</item>
+        <item>Portugues</item>
+        <item>Matematica</item>
+        <item>Geografia</item>
+        <item>Biologia</item>
+        <item>Historia</item>
+        <item>Ingles</item>
+        <item>Fisica</item>
+        <item>Quimica</item>
+    </string-array>
+
+    <string-array name="arDisciplina12">
+        <item>...</item>
+        <item>Portugues</item>
+        <item>Matematica</item>
+        <item>Geografia</item>
+        <item>Biologia</item>
+        <item>Historia</item>
+        <item>Ingles</item>
+        <item>Fisica</item>
+        <item>Quimica</item>
+        <item>Desenho</item>
+        <item>Frances</item>
+        <item>Filosofia</item>
+    </string-array>
+
+    <!--Null-->
+    <string-array name="arNull">
+        <item>...</item>
+    </string-array>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+</resources>

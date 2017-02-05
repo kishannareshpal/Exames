@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#232323</color>
+    <color name="colorPrimaryDark">#0d0d0d</color>
+    <color name="colorAccent">#fc324a</color>
+
+
+    <color name="black">#000000</color>
+    <color name="dark_grey">#202020</color>
+    <color name="very_light_grey">#969696</color>
+    <color name="white">#ffffff</color>
+    <color name="light_red">#fc324a</color>
+    <color name="skinny_blue">#6eb9d4</color>
+
+    <color name="forAbout">#3f4651</color>
+    <color name="forMedia">#314c76</color>
+</resources>
