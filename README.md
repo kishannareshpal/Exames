@@ -9,6 +9,21 @@
 > [![PlayStore](http://www.marinepartsexpress.com/images/googleplay150.png)](https://play.google.com/store/apps/details?id=com.kishan.exames)
 
 
+# Version Updates:
+
+## 1.0:
+Release
+
+## 1.1:
+> Added [fancyButton Library](https://github.com/medyo/Fancybuttons) to have a uniform look of the button even on Older devices.
+
+
+> Implemented the FancyButton on some branches. Going to continue tommorow. I'm tired now.
+
+
+> Fixed certain button styles appearing white Background with white Text. That didn't look good man. But still didn't fix all of it. For now i implemented the: **if(Version is lesser than Lollipop){bButtonName.setTextColor(Color.BLACK)}**
+
+
 
 ### INFO
   App made to help students find exams easily. because you know how tedious it could be to find a specific exam.
