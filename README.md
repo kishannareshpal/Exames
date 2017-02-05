@@ -11,13 +11,13 @@
 
 
 ### INFO
-  App made to help students find exams in one click. We were once in these cluster, and know how tedious it is to find a specific exam.
-	
+  App made to help students find exams easily. because you know how tedious it could be to find a specific exam.
+  
   With this app, you just select it, and voila, it is right there on the tip of your finger. You can even open it inside teh app if you don't have/want any extra <b>"PDFReader"</b>. 
 
 ...............................
 
-### Where are the files/exams i donwloaded, located/saved?
+### Where are the files/exams i downloaded, located/saved?
   All of the exams that you download is stored into the root of the "Internal/External Storage" of your phone. And can be found in an automatically generated Folder called <b>"Exames-App"</b>.
 
     > ExternalStorageRootDirectory/Exames-App/  
