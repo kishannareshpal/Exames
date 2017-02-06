@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+
     android:id="@+id/activity_main"
     android:windowBackground="@color/light_red"
     android:layout_width="match_parent"
@@ -21,40 +24,45 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold|italic"
+            android:id="@+id/tvWelcomeMsg"
+            android:textSize="18sp"
+            android:text="@string/WelcomeMsg"
+            android:gravity="center" />
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:layout_gravity="center_vertical|center_horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textStyle="normal|bold|italic"
-                    android:id="@+id/tvWelcomeMsg"
-                    android:textSize="18sp"
-                    android:text="@string/WelcomeMsg"
-                    android:gravity="center" />
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/btGetStarted"
-                    android:textColor="@color/very_light_grey"
-                    android:backgroundTint="@color/dark_grey"
-                    android:text="@string/btGetStarted" />
-
-            </LinearLayout>
-
-        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btGetStarted"
+            android:textColor="@color/very_light_grey"
+            android:backgroundTint="@color/dark_grey"
+            android:text="@string/btGetStarted"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
 
     </LinearLayout>
 
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="9dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="9dp"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#1d1d1d"
+        fancy:fb_focusColor="#353535"
+        fancy:fb_iconPosition="left"
+        fancy:fb_radius="3dp"
+        fancy:fb_textSize="14dp"
+        fancy:fb_text="@string/aboutbutton"
+        fancy:fb_textColor="@color/very_light_grey"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

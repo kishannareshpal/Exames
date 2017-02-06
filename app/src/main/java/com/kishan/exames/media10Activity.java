@@ -31,6 +31,12 @@ public class media10Activity extends AppCompatActivity {
         et9a10 = (EditText) findViewById(R.id.et9a10);
         et10a10 = (EditText) findViewById(R.id.et10a10);
 
+        //set the button text color to BLACK IF running Less then Lollipop.
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.LOLLIPOP){
+            // Do something for versions bellow lollipop
+            btCalculate10.setTextColor(Color.BLACK);
+        }
+
 
         // on the button click:
         // 1st retrieve the values;

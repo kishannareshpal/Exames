@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Exames</string>
 
+    <!--WelcomeActivity-->
+    <string name="aboutbutton"><b>sobre</b></string>
+
     <!--//MainActivity-->
     <string name="WelcomeMsg">Ola, caro estudante.</string>
     <string name="btGetStarted">Avançar</string>
@@ -16,11 +19,12 @@
     <string name="SubjectHint">selecione a disciplina</string>
     <string name="EpocaHint">selecione a época</string>
     <string name="DownloadButton">Baixar</string>
-    <string name="Look">Ver</string>
+    <string name="Look"><i><b>VER</b></i></string>
+    <string name="bdownload"><b>BAIXAR</b></string>
     <string name="try_again"><u><b><i>Tentar novamente. Clique aqui!</i></b></u></string>
 
     <!--MediasActivity-->
-    <string name="Media10a">10a Classe</string>
+    <string name="Media10a"><b>10a Classe</b></string>
     <string name="Media12a">12a Classe</string>
     <string name="tvQ2">Média anual da?</string>
 
@@ -40,9 +44,9 @@
 
 
     <!--AboutActivity-->
-    <string name="about">Este aplicativo foi desenvolvido por dois Ex-Estudantes da Escola S.
+    <string name="about"><u>Este aplicativo foi desenvolvido por dois Ex-Estudantes da Escola S.
     Emília Daússe de Inhambane, com o objectivo de lhe facilitar na busca de exames anteriores.
-    Bons Estudos.</string>
+    Bons Estudos.</u></string>
 
 
     <!--SPINNERS:-->
