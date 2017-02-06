@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+
     android:id="@+id/activity_medias"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,7 +22,8 @@
         android:layout_height="match_parent"
         android:addStatesFromChildren="false"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true">
 
         <LinearLayout
             android:orientation="vertical"
@@ -42,29 +46,70 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center">
+                android:gravity="center"
+                android:layout_marginTop="5dp">
 
-                <Button
-                    android:text="@string/Media10a"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <!--<Button-->
+                    <!--android:text="@string/Media10a"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/btDez"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:textStyle="normal|bold|italic"-->
+                    <!--android:backgroundTint="@color/forAbout"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:textAllCaps="false" />-->
+
+                <mehdi.sakout.fancybuttons.FancyButton
                     android:id="@+id/btDez"
-                    android:layout_weight="1"
-                    android:textStyle="normal|bold|italic"
-                    android:backgroundTint="@color/forAbout"
-                    android:textColor="@color/white"
-                    android:textAllCaps="false" />
-
-                <Button
-                    android:text="@string/Media12a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/btDoze"
+                    android:paddingBottom="9dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="9dp"
                     android:layout_weight="1"
-                    android:textStyle="normal|bold|italic"
-                    android:textColor="@color/white"
-                    android:backgroundTint="@color/forAbout"
-                    android:textAllCaps="false" />
+                    fancy:fb_borderWidth="1dp"
+                    fancy:fb_defaultColor="@color/forAbout"
+                    fancy:fb_focusColor="#4d5460"
+                    fancy:fb_iconPosition="left"
+                    fancy:fb_radius="2dp"
+                    fancy:fb_textSize="14sp"
+                    fancy:fb_text="@string/Media10a"
+                    fancy:fb_textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="3dp" />
+
+                <!--<Button-->
+                    <!--android:text="@string/Media12a"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/btDoze"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:textStyle="normal|bold|italic"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:backgroundTint="@color/forAbout"-->
+                    <!--android:textAllCaps="false" />-->
+
+                <mehdi.sakout.fancybuttons.FancyButton
+                    android:id="@+id/btDoze"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="9dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="9dp"
+                    android:layout_weight="1"
+                    fancy:fb_borderWidth="1dp"
+                    fancy:fb_defaultColor="@color/forAbout"
+                    fancy:fb_focusColor="#4d5460"
+                    fancy:fb_iconPosition="left"
+                    fancy:fb_radius="2dp"
+                    fancy:fb_textSize="14sp"
+                    fancy:fb_text="@string/Media12a"
+                    fancy:fb_textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp" />
 
             </LinearLayout>
 

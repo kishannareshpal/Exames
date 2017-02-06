@@ -29,6 +29,11 @@ public class media12Activity extends AppCompatActivity {
         btCalculate12 = (Button) findViewById(R.id.btCalculate12);
         tvResult12 = (TextView) findViewById(R.id.tvResult12);
 
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.LOLLIPOP){
+            // Do something for versions bellow lollipop
+            btCalculate12.setTextColor(Color.BLACK);
+        }
+
 
         // on the button click:
         // 1st retrieve the values;

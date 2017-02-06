@@ -16,56 +16,41 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <TextView
+            android:text="@string/tvQ1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical">
+            android:layout_height="wrap_content"
+            android:id="@+id/tvQuestion"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold|italic"
+            android:textAlignment="center"
+            android:textSize="18sp" />
 
-            <TextView
-                android:text="@string/tvQ1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvQuestion"
-                android:textColor="@color/white"
-                android:textStyle="normal|bold|italic"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btExames"
+            android:backgroundTint="@color/dark_grey"
+            android:textColor="@color/very_light_grey"
+            android:text="@string/btExams"
+            android:textStyle="normal|bold|italic"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/btExames"
-                android:backgroundTint="@color/dark_grey"
-                android:textColor="@color/very_light_grey"
-                android:text="@string/btExams"
-                android:textStyle="normal|bold|italic"
-                android:textAllCaps="false"
-                android:textSize="18sp" />
+        <Button
+            android:text="@string/btPautas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btMedias"
+            android:backgroundTint="@color/dark_grey"
+            android:textColor="@color/very_light_grey"
+            android:textStyle="normal|bold|italic"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
 
-            <Button
-                android:text="@string/btPautas"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/btPautas"
-                android:backgroundTint="@color/dark_grey"
-                android:textColor="@color/very_light_grey"
-                android:textStyle="normal|bold|italic"
-                android:textAllCaps="false"
-                android:textSize="18sp" />
-
-            <TextView
-                android:text="sobre >"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvAbout"
-                android:textStyle="normal|bold"
-                android:textAllCaps="true"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
-        </LinearLayout>
     </LinearLayout>
+
 </RelativeLayout>

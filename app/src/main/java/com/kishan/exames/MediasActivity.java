@@ -1,16 +1,21 @@
 package com.kishan.exames;
 
 import android.content.Intent;
+import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.SpannableString;
+import android.text.style.StyleSpan;
 import android.view.View;
 import android.widget.Button;
 
+import mehdi.sakout.fancybuttons.FancyButton;
 
 
 public class MediasActivity extends AppCompatActivity {
 
-    public Button btDez, btDoze;
+    public FancyButton btDez, btDoze;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +25,8 @@ public class MediasActivity extends AppCompatActivity {
 
 
         //Initializing elements:
-
-        btDez = (Button) findViewById(R.id.btDez);
-        btDoze = (Button) findViewById(R.id.btDoze);
-
+        btDez = (FancyButton) findViewById(R.id.btDez);
+        btDoze = (FancyButton) findViewById(R.id.btDoze);
 
         //Setting Action for the Buttons (10a Classe && 12a Classe):
         btDez.setOnClickListener(new View.OnClickListener() {

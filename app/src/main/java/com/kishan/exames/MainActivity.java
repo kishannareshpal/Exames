@@ -2,6 +2,7 @@ package com.kishan.exames;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,8 +12,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public Button btExames, btPautas;
-    public TextView tvAbout;
+    public Button btExames, btMedias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,15 @@ public class MainActivity extends AppCompatActivity {
 
         //calling Functions:
         btExames = (Button) findViewById(R.id.btExames);
-        btPautas = (Button) findViewById(R.id.btPautas);
-        tvAbout = (TextView) findViewById(R.id.tvAbout);
+        btMedias = (Button) findViewById(R.id.btMedias);
+
+        //set the button text color to BLACK IF running Less then Lollipop.
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.LOLLIPOP){
+            // Do something for versions bellow lollipop
+            btExames.setTextColor(Color.BLACK);
+            btMedias.setTextColor(Color.BLACK);
+        }
+
 
         btExames.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,20 +41,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btPautas.setOnClickListener(new View.OnClickListener() {
+        btMedias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent executePautasActivity = new Intent(MainActivity.this, MediasActivity.class);
                 startActivity(executePautasActivity);
-            }
-        });
-
-
-        tvAbout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent executeAboutActivity = new Intent(MainActivity.this, AboutActivity.class);
-                startActivity(executeAboutActivity);
             }
         });
 

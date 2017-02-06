@@ -33,6 +33,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
+import mehdi.sakout.fancybuttons.FancyButton;
 import permissions.dispatcher.NeedsPermission;
 import permissions.dispatcher.OnNeverAskAgain;
 import permissions.dispatcher.OnShowRationale;
@@ -48,7 +49,7 @@ public class ExamesActivity extends AppCompatActivity {
     public Firebase mRef;
     private StorageReference mStorageRef, pdfRef;
     private ArrayList<String> anosArray;
-    private Button bDownload;
+    private FancyButton bDownload;
     private File localFile;
     public FileDownloadTask downloadTask;
 
@@ -62,11 +63,8 @@ public class ExamesActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_exames);
 
-
-
-
         //Calling functions:
-        Button bLook = (Button) findViewById(R.id.bLook);
+        FancyButton bLook = (FancyButton) findViewById(R.id.bLook);
         spClasse = (Spinner) findViewById(R.id.spClasse);
         spAno = (Spinner) findViewById(R.id.spAno);
         spDisciplina = (Spinner) findViewById(R.id.spDisciplina);
@@ -74,7 +72,7 @@ public class ExamesActivity extends AppCompatActivity {
         mRef = new Firebase("https://examesproject.firebaseio.com/Anos");
         anosArray = new ArrayList<>();
         mStorageRef = FirebaseStorage.getInstance().getReference();
-        bDownload = (Button) findViewById(R.id.bDownload);
+        bDownload = (FancyButton) findViewById(R.id.bDownload);
 
         final ExamesActivity temp = this;
 
@@ -182,8 +180,6 @@ public class ExamesActivity extends AppCompatActivity {
                 Epoca = spEpoca.getSelectedItem().toString();
                 Disciplina = spDisciplina.getSelectedItem().toString();
                 Ano = spAno.getSelectedItem().toString();
-
-
 
                 //Download the File:
                 //First Check if ON the Spinner, everything is checked. It should be. If not, show error Toast.
