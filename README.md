@@ -73,7 +73,7 @@ You can help me by reporting bugs and leaving a review in the playsore.
 THE FOLLOWING SETS FORTH ATTRIBUTIONS NOTICES FOR THIRD PARTY SOFTWARE THAT MAY BE CONTAINED IN PORTIONS OF THE EXAMES-APP PRODUCT. 
 
 ---
-The following software may be included in this product: android-about-page by El Mehdi Sakout. 
+The following software may be included in this product: **android-about-page by El Mehdi Sakout**. 
 This software contains the following license and notice bellow: 
 
 > The MIT License (MIT)
@@ -86,7 +86,7 @@ This software contains the following license and notice bellow:
 > THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-> The following software may be included in this product: Fancybuttons by El Mehdi Sakout. 
+> The following software may be included in this product: **Fancybuttons by El Mehdi Sakout**. 
 > This software contains the following license and notice bellow: 
 
 > MIT License:
@@ -99,7 +99,7 @@ This software contains the following license and notice bellow:
 > THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---
-The following software may be included in this product: pdf-Viewer by Bartosz Schiller. 
+The following software may be included in this product: **pdf-Viewer by Bartosz Schiller**. 
 This software contains the following license and notice bellow: 
 
 > "Created with the help of android-pdfview by Joan Zapata"
@@ -119,7 +119,7 @@ limitations under the License.
 
 
 ---
-The following software may be included in this product: MaterialFilePicker by nbsp-team. 
+The following software may be included in this product: **MaterialFilePicker by nbsp-team**. 
 This software contains the following license and notice bellow: 
 
 > No license found. Please refer to the the Github page: https://github.com/nbsp-team/MaterialFilePicker
