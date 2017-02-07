@@ -1,7 +1,5 @@
 # ExamesGithub
 
-...
-
 ![logo.png](/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
 
 
@@ -128,13 +126,13 @@ This software contains the following license and notice bellow:
 
 
 ---
-The following software may be included and powered by this product: Firebase by Google. 
+The following software may be included and powered by this product: **Firebase by Google**. 
 This software contains the following license and notice bellow: 
 
 > Please refer to the oficial page: http://firebase.google.com or GitHub: https://github.com/firebase/
 
 ---
-The following software may be included and powered by this product: Firebase by Google. 
+The following software may be included and powered by this product: **Permission Dispatcher by Shintaro Katafuchi, Marcel Schnelle, Yoshinori Isogai**. 
 This software contains the following license and notice bellow:
 
 > Copyright 2016 Shintaro Katafuchi, Marcel Schnelle, Yoshinori Isogai
