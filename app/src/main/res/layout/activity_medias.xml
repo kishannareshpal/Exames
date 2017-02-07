@@ -38,6 +38,7 @@
                 android:textStyle="normal|bold|italic"
                 android:textAllCaps="false"
                 android:textAlignment="center"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:text="@string/tvQ2"
                 android:textSize="18sp" />

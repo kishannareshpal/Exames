@@ -295,8 +295,7 @@ public class ExamesActivity extends AppCompatActivity {
         //show the alertdialog
         new AlertDialog.Builder(ExamesActivity.this)
                 .setTitle("Download")
-                .setMessage("O Exame que foi selecionado: "+ "\n" + "\n" + Classe + "\n" + Disciplina + "\n" + Ano + "\n" + Epoca)
-                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setMessage("O Exame que foi selecionado: " + "\n\n" + "Classe: " + Classe + "\n" + "Disciplina: " + Disciplina + "\n" + "Ano: " + Ano + "\n" + "Época: " + Epoca)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int whichButton) {
@@ -344,21 +343,21 @@ public class ExamesActivity extends AppCompatActivity {
 
                                 long rawFileSize = taskSnapshot.getTotalByteCount();
 
-                                if(rawFileSize < 100000){
-                                    long sizeInKB = rawFileSize / 1000000;
+                                if(rawFileSize <= 999999){
+                                    long sizeInKB = rawFileSize / 1000;
                                     progressDialog.setMessage("Tamanho: " + sizeInKB + "KB" + "\n" + "Progresso: " +((int) progressPercentage)+"%" + "\n" + "\n" + "Se o download levar mais de 3 minutos para iniciar, verifique a sua conexao com a internet!");
                                 }
-                                else if(rawFileSize > 1000000){
-                                    long sizeInMB = rawFileSize / 1000000000;
-                                    progressDialog.setMessage("Tamanho: " + sizeInMB + "MB" + "\n" + "Progresso: " + ((int) progressPercentage)+"%" + "\n" + "\n"+ "Se o download levar mais de 3 minutos tempo para iniciar, verifique a sua conexao com a internet!");
+                                else if(rawFileSize > 999999){
+                                    long sizeInMB = rawFileSize / 1000000;
+                                    progressDialog.setMessage("Tamanho: " + sizeInMB + "MB" + "\n" + "Progresso: " + ((int) progressPercentage)+"%" + "\n" + "\n"+ "Se o download levar mais de 3 minutos para iniciar, verifique a sua conexao com a internet!");
                                 }
-
                             }
                         });
 
                         //Cancel Button on the Alert Dialog:
                     }})
-                .setNegativeButton(android.R.string.no, null).show();
+                .setNegativeButton(android.R.string.no, null)
+                .show();
 
     }
 
