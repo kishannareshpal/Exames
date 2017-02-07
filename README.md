@@ -1,6 +1,6 @@
 # ExamesGithub
 
-..............................
+...
 
 ![logo.png](/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
 
@@ -10,23 +10,27 @@
 
 
 # Version Updates:
-
 ## 1.0:
-Release
+Release build
 
 ## 1.1:
 > Added [fancyButton Library](https://github.com/medyo/Fancybuttons) to have a uniform look of the button even on Older devices.
 
+> Implemented the FancyButton Library by Mehdi Sakout to fix some of the visuals on lower versions of Android.
+> Fixed certain button styles appearing white Background with white Text. That didn't look good man. ~~But still didn't fix all of it. For now i implemented the: **if(Version is lesser than Lollipop){bButtonName.setTextColor(Color.BLACK)}**~~
 
-> Implemented the FancyButton on some branches. Going to continue tommorow. I'm tired now.
+## Beta 1.2:
+> New Look.
+> Added About page and Info.
+> Fixed the Visual bug on older Android versions once and for all. It means that now it has a Uniform look, independent of the Android Version.
+> Optimized.
+> Open Beta.
 
-
-> Fixed certain button styles appearing white Background with white Text. That didn't look good man. But still didn't fix all of it. For now i implemented the: **if(Version is lesser than Lollipop){bButtonName.setTextColor(Color.BLACK)}**
-
-
+## Future
+//TODO: Add GUIAS (GUIDES).
 
 ### INFO
-  App made to help students find exams easily. because you know how tedious it could be to find a specific exam.
+  Made by a Student for Students. This will definetely help you to study
   
   With this app, you just select it, and voila, it is right there on the tip of your finger. You can even open it inside teh app if you don't have/want any extra <b>"PDFReader"</b>. 
 
@@ -40,13 +44,16 @@ Release
 
   <b> Hint: If you want, you can use that location to share/open with a friend/app.</b>
 
-.............................
+
+...
+
 
 ### What else can this app do?
 This app can also be used to determine whether or not you'll be eligible for an Exam Session. That is, you can calculate your overall through this app, and if it's higher that 13, than Congratulations, you passed and won't need to realize any exam. Otherwise, you will realize the exam, or in a bad luck, you will not even be eligible to realize one, sorry, it is not my fault. You are the one that must study man.
 
 
-...........................
+...
+
 
 ### Do you plan to add more features to this app?
 Yes, i'll be constantly updating this app, fixing bugs (cause you know, bugs are invincible) and hopefully adding/improving some features here and there.
