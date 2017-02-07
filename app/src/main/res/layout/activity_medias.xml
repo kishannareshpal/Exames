@@ -49,17 +49,6 @@
                 android:gravity="center"
                 android:layout_marginTop="5dp">
 
-                <!--<Button-->
-                    <!--android:text="@string/Media10a"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:id="@+id/btDez"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:textStyle="normal|bold|italic"-->
-                    <!--android:backgroundTint="@color/forAbout"-->
-                    <!--android:textColor="@color/white"-->
-                    <!--android:textAllCaps="false" />-->
-
                 <mehdi.sakout.fancybuttons.FancyButton
                     android:id="@+id/btDez"
                     android:layout_width="match_parent"
@@ -73,23 +62,12 @@
                     fancy:fb_defaultColor="@color/forAbout"
                     fancy:fb_focusColor="#4d5460"
                     fancy:fb_iconPosition="left"
-                    fancy:fb_radius="2dp"
+                    fancy:fb_radius="7dp"
                     fancy:fb_textSize="14sp"
                     fancy:fb_text="@string/Media10a"
                     fancy:fb_textColor="@color/white"
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="3dp" />
-
-                <!--<Button-->
-                    <!--android:text="@string/Media12a"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:id="@+id/btDoze"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:textStyle="normal|bold|italic"-->
-                    <!--android:textColor="@color/white"-->
-                    <!--android:backgroundTint="@color/forAbout"-->
-                    <!--android:textAllCaps="false" />-->
 
                 <mehdi.sakout.fancybuttons.FancyButton
                     android:id="@+id/btDoze"
@@ -104,7 +82,7 @@
                     fancy:fb_defaultColor="@color/forAbout"
                     fancy:fb_focusColor="#4d5460"
                     fancy:fb_iconPosition="left"
-                    fancy:fb_radius="2dp"
+                    fancy:fb_radius="7dp"
                     fancy:fb_textSize="14sp"
                     fancy:fb_text="@string/Media12a"
                     fancy:fb_textColor="@color/white"

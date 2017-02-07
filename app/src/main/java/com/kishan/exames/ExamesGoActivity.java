@@ -18,7 +18,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 
-public class ExamesGoActivity extends Activity {
+public class ExamesGoActivity extends AppCompatActivity {
 
     public PDFView pdfView;
 
