@@ -19,16 +19,6 @@
         android:gravity="center_vertical|center_horizontal"
         android:weightSum="1">
 
-        <TextView
-            android:text="@string/about"
-            android:layout_width="241dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            android:textStyle="normal|bold|italic"
-            android:gravity="center_vertical"
-            android:textAlignment="center"
-            android:textSize="14sp"
-            android:textColor="@color/white" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:id="@+id/activity_selection"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,9 +17,10 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_vertical"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:gravity="center_vertical">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <TextView
             android:text="@string/tvQ1"
@@ -29,27 +32,45 @@
             android:textAlignment="center"
             android:textSize="18sp" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <mehdi.sakout.fancybuttons.FancyButton
             android:id="@+id/btExames"
-            android:backgroundTint="@color/dark_grey"
-            android:textColor="@color/very_light_grey"
-            android:text="@string/btExams"
-            android:textStyle="normal|bold|italic"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:text="@string/btPautas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="9dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="9dp"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/dark_grey"
+            fancy:fb_focusColor="#2d2d2d"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="100dp"
+            fancy:fb_textSize="18sp"
+            fancy:fb_text="@string/btExams"
+            fancy:fb_textColor="@color/very_light_grey"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp" >
+
+        </mehdi.sakout.fancybuttons.FancyButton>
+
+        <mehdi.sakout.fancybuttons.FancyButton
             android:id="@+id/btMedias"
-            android:backgroundTint="@color/dark_grey"
-            android:textColor="@color/very_light_grey"
-            android:textStyle="normal|bold|italic"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="9dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="9dp"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/dark_grey"
+            fancy:fb_focusColor="#2d2d2d"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="100dp"
+            fancy:fb_textSize="18sp"
+            fancy:fb_text="@string/btMedias"
+            fancy:fb_textColor="@color/very_light_grey"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp" />
 
     </LinearLayout>
 

@@ -116,33 +116,36 @@
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="9dp"
-                    fancy:fb_borderWidth="1dp"
                     fancy:fb_defaultColor="#c9c9c9"
                     fancy:fb_focusColor="#eaeaea"
-                    fancy:fb_iconPosition="left"
-                    fancy:fb_radius="3dp"
-                    fancy:fb_text="@string/bdownload"
+                    fancy:fb_radius="8dp"
+                    fancy:fb_text="@string/DownloadButton"
                     fancy:fb_textColor="#000000"
+                    fancy:fb_textSize="14sp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="6dp"
-                    android:layout_marginRight="6dp"/>
+                    android:layout_marginRight="6dp" >
+
+                </mehdi.sakout.fancybuttons.FancyButton>
 
                 <mehdi.sakout.fancybuttons.FancyButton
                     android:id="@+id/bLook"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:paddingBottom="9dp"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp"
                     android:paddingTop="9dp"
-                    fancy:fb_borderWidth="1dp"
                     fancy:fb_defaultColor="#fc324a"
                     fancy:fb_focusColor="#fd5065"
-                    fancy:fb_iconPosition="left"
-                    fancy:fb_radius="3dp"
-                    fancy:fb_text="@string/Look"
+                    fancy:fb_radius="8dp"
                     fancy:fb_textColor="#000000"
-                    android:layout_gravity="center_vertical" />
+                    fancy:fb_text="@string/Look"
+                    fancy:fb_textSize="14sp"
+                    android:animateLayoutChanges="false"
+                    android:layout_height="match_parent"
+                    android:addStatesFromChildren="false"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center" />
 
 
 
@@ -151,5 +154,14 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:text="info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvInfo"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
 
 </RelativeLayout>

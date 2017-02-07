@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_media12"
     android:layout_width="match_parent"
@@ -105,17 +106,25 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="right">
 
-                <Button
-                    android:text="Calcular >"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <mehdi.sakout.fancybuttons.FancyButton
                     android:id="@+id/btCalculate12"
-                    android:textStyle="normal|bold|italic"
-                    android:textAllCaps="false"
-                    android:layout_gravity="right"
-                    android:textColor="@color/white"
-                    tools:ignore="RtlHardcoded"
-                    android:backgroundTint="@color/dark_grey" />
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="9dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="9dp"
+                    android:layout_weight="1"
+                    fancy:fb_defaultColor="@color/dark_grey"
+                    fancy:fb_focusColor="#303030"
+                    fancy:fb_iconPosition="left"
+                    fancy:fb_radius="20dp"
+                    fancy:fb_textSize="14sp"
+                    fancy:fb_text="Calcular >"
+                    fancy:fb_textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="3dp" />
+
             </LinearLayout>
 
         </LinearLayout>

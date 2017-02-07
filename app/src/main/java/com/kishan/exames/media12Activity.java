@@ -2,8 +2,11 @@ package com.kishan.exames;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spanned;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -11,11 +14,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import mehdi.sakout.fancybuttons.FancyButton;
+
 public class media12Activity extends AppCompatActivity {
 
     EditText et12a12, et11a12;
     TextView tvResult12;
-    Button btCalculate12;
+    FancyButton btCalculate12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +31,12 @@ public class media12Activity extends AppCompatActivity {
         // initialize views:
         et12a12 = (EditText) findViewById(R.id.et12a12);
         et11a12 = (EditText) findViewById(R.id.et11a12);
-        btCalculate12 = (Button) findViewById(R.id.btCalculate12);
+        btCalculate12 = (FancyButton) findViewById(R.id.btCalculate12);
         tvResult12 = (TextView) findViewById(R.id.tvResult12);
 
-        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.LOLLIPOP){
-            // Do something for versions bellow lollipop
-            btCalculate12.setTextColor(Color.BLACK);
-        }
+
+        //Formatting the button text programatically:
+        btCalculate12.getTextViewObject().setText(fromHtml("<b>" + "<i>" + " Calcular > " + "</i>"+ "</b>"));
 
 
         // on the button click:
@@ -104,6 +108,16 @@ public class media12Activity extends AppCompatActivity {
     public void hideKeyboard(View view) {
         InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+
+    //Text Formatting stuff
+    @SuppressWarnings("deprecation")
+    public static Spanned fromHtml(String source) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            return Html.fromHtml(source, Html.FROM_HTML_MODE_LEGACY);
+        } else {
+            return Html.fromHtml(source);
+        }
     }
 
 }

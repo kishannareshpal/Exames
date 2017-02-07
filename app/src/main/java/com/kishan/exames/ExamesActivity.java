@@ -5,15 +5,19 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
+import android.text.Spanned;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.ChildEventListener;
@@ -44,12 +48,14 @@ import permissions.dispatcher.RuntimePermissions;
 @RuntimePermissions
 public class ExamesActivity extends AppCompatActivity {
 
+    public TextView tvInfo;
     public Spinner spClasse, spAno, spDisciplina, spEpoca;
     public ArrayAdapter adapterClasse, adapterDisc10, adapterDisc12, adapterEpoca, adapterNull;
     public Firebase mRef;
     private StorageReference mStorageRef, pdfRef;
     private ArrayList<String> anosArray;
     private FancyButton bDownload;
+    private FancyButton bLook;
     private File localFile;
     public FileDownloadTask downloadTask;
 
@@ -64,7 +70,8 @@ public class ExamesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_exames);
 
         //Calling functions:
-        FancyButton bLook = (FancyButton) findViewById(R.id.bLook);
+        tvInfo = (TextView) findViewById(R.id.tvInfo);
+        bLook = (FancyButton) findViewById(R.id.bLook);
         spClasse = (Spinner) findViewById(R.id.spClasse);
         spAno = (Spinner) findViewById(R.id.spAno);
         spDisciplina = (Spinner) findViewById(R.id.spDisciplina);
@@ -73,6 +80,12 @@ public class ExamesActivity extends AppCompatActivity {
         anosArray = new ArrayList<>();
         mStorageRef = FirebaseStorage.getInstance().getReference();
         bDownload = (FancyButton) findViewById(R.id.bDownload);
+
+
+        //Formatting the button text programatically:
+        bLook.getTextViewObject().setText(fromHtml("<b>" + getString(R.string.Look)  + "</b>"));
+        bDownload.getTextViewObject().setText(fromHtml("<b>" + getString(R.string.DownloadButton)  + "</b>"));
+
 
         final ExamesActivity temp = this;
 
@@ -202,8 +215,37 @@ public class ExamesActivity extends AppCompatActivity {
             }
         });
 
+
+
+        tvInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder ad = new AlertDialog.Builder(ExamesActivity.this);
+                ad.setTitle("Informação") //
+                        .setMessage("Os Exames baixados ficam guardados no seu telefone em uma pasta nomeada: \n \nExames-App \n\nNota: Brevemente seram adicionadas as respectivas guias.") //
+
+                        .setPositiveButton(getString(R.string.ok_forDialog), new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.dismiss();
+                            }
+                        });
+                ad.show();
+            }
+        });
+
     }//end of the onCreate Method
 
+
+
+    //Text Formatting stuff
+    @SuppressWarnings("deprecation")
+    public static Spanned fromHtml(String source) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            return Html.fromHtml(source, Html.FROM_HTML_MODE_LEGACY);
+        } else {
+            return Html.fromHtml(source);
+        }
+    }
 
 
     //opens FileBrowser with the use of "Material Library"

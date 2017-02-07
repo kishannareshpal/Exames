@@ -34,16 +34,22 @@
             android:text="@string/WelcomeMsg"
             android:gravity="center" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <mehdi.sakout.fancybuttons.FancyButton
             android:id="@+id/btGetStarted"
-            android:textColor="@color/very_light_grey"
-            android:backgroundTint="@color/dark_grey"
-            android:text="@string/btGetStarted"
-            android:textSize="14sp"
-            android:textAlignment="center"
-            android:textStyle="normal|bold" />
+            android:paddingBottom="9dp"
+            android:paddingTop="9dp"
+            fancy:fb_defaultColor="@color/dark_grey"
+            fancy:fb_focusColor="#292929"
+            fancy:fb_radius="100dp"
+            fancy:fb_textSize="20sp"
+            fancy:fb_textColor="@color/white"
+            fancy:fb_text="@string/btGetStarted"
+            android:animateLayoutChanges="false"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center"
+            android:layout_margin="4dp" />
 
     </LinearLayout>
 
@@ -64,5 +70,6 @@
         fancy:fb_text="@string/aboutbutton"
         fancy:fb_textColor="@color/very_light_grey"
         android:layout_gravity="center_vertical"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true" />
 </RelativeLayout>
