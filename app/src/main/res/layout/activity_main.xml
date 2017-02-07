@@ -30,6 +30,7 @@
             android:textColor="@color/white"
             android:textStyle="normal|bold|italic"
             android:textAlignment="center"
+            android:gravity="center"
             android:textSize="18sp" />
 
         <mehdi.sakout.fancybuttons.FancyButton

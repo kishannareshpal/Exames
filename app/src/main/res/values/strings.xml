@@ -109,4 +109,13 @@
         <item>...</item>
     </string-array>
 
+
+    <!--AboutPage-->
+    <string name="Licenses">THE FOLLOWING SETS FORTH ATTRIBUTION NOTICES FOR THIRD PARTY SOFTWARES
+    THAT MAY BE CONTAINED IN PORTIONS OF THE EXAMES PRODUCT. \n......\n\nThe following software
+        may be included in this product:\nFirebase by Google.\nFasterXML by Jackson\nMaterialFile
+        Picker by nbsp-team.\nPermissionDispatcher by hotchemi.\nAndroid-About-Page by Medyo.\n \nPlease refer to the Product GitHub page listed in the about section of the app for detailed
+        licenses for the above Softwares.\n\nThank you for downloading this app.\nKishan Nareshpal Jadav.
+    </string>
+
 </resources>
