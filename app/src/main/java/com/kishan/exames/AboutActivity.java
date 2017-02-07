@@ -18,7 +18,7 @@ public class AboutActivity extends AppCompatActivity {
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
                 .setImage(R.mipmap.ic_launcher)
-                .addItem(new Element().setTitle("Version 1.1"))
+                .addItem(new Element().setTitle("Version: BETA-1.2"))
                 .addGroup("Connect with us")
                 .addEmail("kishan_jadav@hotmail.com")
                 .addPlayStore("com.kishan.exames")

@@ -21,19 +21,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ExamesActivity"
+        <activity
+            android:name=".ExamesActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".MediasActivity"
+        <activity
+            android:name=".MediasActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".ExamesGoActivity"
+        <activity
+            android:name=".ExamesGoActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".AboutActivity"
+        <activity
+            android:name=".AboutActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".media10Activity"
+        <activity
+            android:name=".media10Activity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".media12Activity"
+        <activity
+            android:name=".media12Activity"
             android:screenOrientation="portrait"/>
     </application>
 
