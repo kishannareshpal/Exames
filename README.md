@@ -30,7 +30,7 @@
 
 
 ### Quick INFO
-  Made by a Student for Students. This will definetely help you to study for exams!
+  Made by a Student for Students. This will definetely help you study for exams!
 
 ...............................
 ### FAQ!  
