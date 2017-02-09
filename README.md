@@ -7,29 +7,34 @@
 > [![PlayStore](http://www.marinepartsexpress.com/images/googleplay150.png)](https://play.google.com/store/apps/details?id=com.kishan.exames)
 
 
-# Versions:
-## 1.0:
+# Version Changelog:
+### 1.0:
 > Release build.
 
-## 1.1:
-> Added [fancyButton Library](https://github.com/medyo/Fancybuttons) to have a uniform look of the button even on Older devices. 
-> Implemented the FancyButton Library by Mehdi Sakout to fix some of the visuals on lower versions of Android. 
-> Fixed certain button styles appearing white Background with white Text. That didn't look good man. ~~But still didn't fix all of it. For now i implemented the: **if(Version is lesser than Lollipop){bButtonName.setTextColor(Color.BLACK)}**~~
+### 1.1: 
+> Implemented the FancyButton Library[](/medyo/Fancybuttons) by Mehdi Sakout to fix the button visuals on lower versions of Android. 
+> Fixed certain button styles appearing with white Background with white Text. That didn't look good man. ~~But still didn't fix all of it. For now i implemented the: **if(Version is lesser than Lollipop){bButtonName.setTextColor(Color.BLACK)}**~~
 
-## Beta 1.2:
-> New Look. 
+### 1.2.1:
+> Updated Look. 
 > Added About page and Info. 
-> Fixed the Visual bug on older Android versions once and for all. It means that now it has a Uniform look, independent of the Android Version. 
+> Fixed the visual bug on older Android versions once and for all. It means that now it has a Uniform look, independent of the Android Version. 
 > Optimized. 
-> Open Beta. 
+> Open Beta. Join Now!
 
-## Future
-//TODO: Add GUIAS (GUIDES).
+### 1.3:
+> Guias now available to download! You may now access it via the Enunciado file (Only if you have it downloaded). Or open it directly.
+> Fixed a download bug where when the user clicks the cancel button, the portions of the file still remained.
+> Added Feedback button.
+> Now checks if the file exists before downloading. If the file exists, than it won't download.
+> Maybe added/forgot_to_fix some more bugs. Dunno :) You will found out on the next release.
+
+
 
 ### INFO
   Made by a Student for Students. This will definetely help you to study
   
-  With this app, you just select it, and voila, it is right there on the tip of your finger. You can even open it inside teh app if you don't have/want any extra <b>"PDFReader"</b>. 
+  With this app, you just select it, and voila, it is right there on the tip of your finger. You can even open it inside teh app if you don't have/want any extra <b>"PDFReader"</b>. You can like our facebook: @exames.moz
 
 ...............................
 
@@ -39,21 +44,30 @@
     > ExternalStorageRootDirectory/Exames-App/  
     > InternalStorageRootDirectory/Exames-App/ 
     
+
  ** Can i delete the file from within the app?** 
+
+
  Ans: No, as of now, you can't. You can only delete it using a File Manager. Just like normal files. 
  
- ** Can i change the Save Directory (Internal/External)? **
+ 
+ 
+ ** Can i change the Save Directory (Internal/External)? **  
+
+
  Ans: Not yet :(. The app will automatically find the appropriate one. Which has the most space. 
     
     > The file name will look like this: "Disciplina-Classe-Ano-Epoca.ext". 
-    > E.g: xxxxxx-1Xa Classe-201x-x Epoca.pdf
-
+    > E.g: xxxxxx-1Xa Classe-201x-x Epoca.pdf 
+ 
   <b> Hint: You can use that location to delete/share/open the file.</b>
 
 
 
-### What else can this app do?
-> You can calculate the averages.
+### What else can this app do? 
+
+
+> It can also calculate your averages if you are into it.
 
 
 ### Do you plan to add more features to this app?
