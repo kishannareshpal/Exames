@@ -35,13 +35,13 @@
 ...............................
 ### FAQ!  
 ##### Where are the files/exams i downloaded, located/saved?  
-  All of the files are stored into the root of the "Internal/External Storage" of your phone. It will generate a folder called <b>"Exames-App"</b> where everything will be saved.
+  All of the files are stored into the root of the "Internal/External Storage" of your phone. It will create a folder called <b>"Exames-App"</b> where everything will be stored.
 
     > ExternalStorageRootDirectory/Exames-App/  
     > InternalStorageRootDirectory/Exames-App/ 
     
 
- > **Can i delete the file from within the app?**  
+ > **Can i delete the file while on the app?**
  > Ans: No, as of now, you can't. You can only delete it using a File Manager. Just like normal files. 
  
  
@@ -50,7 +50,8 @@
  > Ans: Not yet :(. The app will automatically find the appropriate one. Which has the most space. 
     
     > The file name will look like this: "Disciplina-Classe-Ano-Epoca.ext". 
-    > E.g: xxxxxx-1Xa Classe-201x-x Epoca.pdf 
+    > E.g: xxxxxx-1xa Classe-201x-x Epoca.pdf 
+    > //Where **X** can be a letter or a number.
  
   > <b> Hint: You can use that location to delete/share/open the file.</b>
 
