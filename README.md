@@ -69,6 +69,7 @@ As of now, i'm looking forward to add a feature that let's the user upload an ex
 ### Can i (user) help you?
 Yes indeed. You are the only thing i have to be able to make this app see Heaven. 
 You can help me by reporting bugs and leaving a review in the playsore.
+  > Email: kishan_jadav@hotmail.com
 
 
 
