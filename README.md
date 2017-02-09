@@ -67,8 +67,7 @@ Yes, i'll be constantly updating this app, fixing bugs (cause you know, bugs are
 As of now, i'm looking forward to add a feature that let's the user upload an exam that is not yet available on the server. Maybe when v2.0 comes out, it will roll out with this feature.
 
 ### Can i (user) help you?
-Yes indeed. You are the only thing i have to be able to make this app see Heaven. 
-You can help me by reporting bugs and leaving a review in the playsore.
+Yes indeed. You can help me out by reporting bugs and leaving a review in the playsore. Or even making pull requests.
   > Email: kishan_jadav@hotmail.com
 
 
