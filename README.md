@@ -29,10 +29,8 @@
 
 
 
-### INFO
+### Quick INFO
   Made by a Student for Students. This will definetely help you to study for exams!
-  
-  With this app, you just select it, and voila, it is right there on the tip of your finger. You can even open it inside teh app if you don't have/want any extra <b>"PDFReader"</b>. You can like our facebook: @exames.moz
 
 ...............................
 ### FAQ!  
