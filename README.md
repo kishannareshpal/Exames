@@ -4,7 +4,7 @@
 
 
 ### Download:
-> [![PlayStore](Download)](https://api.icons8.com/download/231c4cb380f2ab0e685e72f32260b21c55a0de16/Color/PNG/256/Very_Basic/download_2-256.png)
+> [![PlayStore](https://api.icons8.com/download/231c4cb380f2ab0e685e72f32260b21c55a0de16/Color/PNG/256/Very_Basic/download_2-256.png)](https://play.google.com/store/apps/details?id=com.kishan.exames)
 
 
 ### Version Changelog:
@@ -29,13 +29,13 @@
 
 
 
-## INFO
+### INFO
   Made by a Student for Students. This will definetely help you to study
   
   With this app, you just select it, and voila, it is right there on the tip of your finger. You can even open it inside teh app if you don't have/want any extra <b>"PDFReader"</b>. You can like our facebook: @exames.moz
 
 ...............................
-# FAQ!  
+### FAQ!  
 ##### Where are the files/exams i downloaded, located/saved?  
   All of the files are stored into the root of the "Internal/External Storage" of your phone. It will generate a folder called <b>"Exames-App"</b> where everything will be saved.
 
