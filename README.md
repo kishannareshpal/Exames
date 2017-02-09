@@ -4,7 +4,7 @@
 
 
 ### Download:
-> [![PlayStore](https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png)](https://play.google.com/store/apps/details?id=com.kishan.exames)
+> [![PlayStore](https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png)](https://play.google.com/store/apps/details?id=com.kishan.exames) For Android 4.1 and above.
 
 
 ### Version Changelog:
