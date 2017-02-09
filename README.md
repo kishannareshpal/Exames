@@ -4,7 +4,7 @@
 
 
 ### Download:
-> [![PlayStore](https://api.icons8.com/download/231c4cb380f2ab0e685e72f32260b21c55a0de16/Color/PNG/256/Very_Basic/download_2-256.png)](https://play.google.com/store/apps/details?id=com.kishan.exames)
+> [![PlayStore](https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png)](https://play.google.com/store/apps/details?id=com.kishan.exames)
 
 
 ### Version Changelog:
