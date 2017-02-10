@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.View;
+import android.widget.Toast;
 
 import mehdi.sakout.fancybuttons.FancyButton;
 
@@ -62,8 +64,29 @@ public class WelcomeActivity extends AppCompatActivity {
         }
     }
 
+    //Back button action setter:
+    boolean doubleBackToExitPressedOnce = false;
+    @Override
+    public void onBackPressed() {
 
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
 
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Clique novamente para sair", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
+
+       /* super.onBackPressed();*/
     }
+}
 
 

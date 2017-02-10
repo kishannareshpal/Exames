@@ -1,18 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_exames_go"
+
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.kishan.exames.ExamesGoActivity"
-    android:background="@color/dark_grey">
+    android:background="@color/dark_grey"
 
+    android:gravity="top"
+    app:umanoPanelHeight="22.5dp"
+    app:umanoShadowHeight="5dp"
+    app:umanoDragView="@+id/dragView">
 
-        <com.github.barteksc.pdfviewer.PDFView
-            android:id="@+id/pdfView"
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            />
+            android:background="@color/dark_grey">
 
 
-</RelativeLayout>
+                <com.github.barteksc.pdfviewer.PDFView
+                    android:id="@+id/pdfView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="false"
+                android:id="@+id/lere">
+
+
+                <com.github.barteksc.pdfviewer.PDFView
+                    android:id="@+id/pdfPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="Possíveis causas desta mensagem:\n1- Nao tens o guia deste enunciado. Volta lá e baixe.\n\n2- Abriste um guia."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvNotice"
+                    android:layout_weight="0.5"
+                    android:textStyle="normal|bold|italic"
+                    android:textSize="18sp"
+                    android:textColor="@color/light_red"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:padding="70dp" />
+
+                <TextView
+                    android:id="@+id/dragView"
+                    android:text="clique/deslize para ver/esconder a guia."
+                    android:textSize="@dimen/about_group_item_text_size"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+
+                    android:layout_width="match_parent"
+                    android:textStyle="normal|bold|italic"
+                    android:background="#ca3f3f"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

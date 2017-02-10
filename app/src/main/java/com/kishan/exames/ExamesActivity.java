@@ -2,13 +2,18 @@ package com.kishan.exames;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.PhoneNumberUtils;
 import android.text.Html;
 import android.text.Spanned;
 import android.util.Log;
@@ -48,15 +53,15 @@ import permissions.dispatcher.RuntimePermissions;
 @RuntimePermissions
 public class ExamesActivity extends AppCompatActivity {
 
-    public TextView tvInfo;
+    public TextView tvInfo; /*tvFeedback*/
     public Spinner spClasse, spAno, spDisciplina, spEpoca;
     public ArrayAdapter adapterClasse, adapterDisc10, adapterDisc12, adapterEpoca, adapterNull;
     public Firebase mRef;
-    private StorageReference mStorageRef, pdfRef;
+    private StorageReference mStorageRef, pdfRef, guiasRef;
     private ArrayList<String> anosArray;
     private FancyButton bDownload;
     private FancyButton bLook;
-    private File localFile;
+    private File localFile, localguiaFile;
     public FileDownloadTask downloadTask;
 
     public ProgressDialog progressDialog;
@@ -80,6 +85,7 @@ public class ExamesActivity extends AppCompatActivity {
         anosArray = new ArrayList<>();
         mStorageRef = FirebaseStorage.getInstance().getReference();
         bDownload = (FancyButton) findViewById(R.id.bDownload);
+//        tvFeedback = (TextView) findViewById(R.id.tvFeedback);
 
 
         //Formatting the button text programatically:
@@ -178,6 +184,7 @@ public class ExamesActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 downloadTask.cancel();
+
                 Toast.makeText(ExamesActivity.this, "Download cancelado.", Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
             }
@@ -222,7 +229,7 @@ public class ExamesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 AlertDialog.Builder ad = new AlertDialog.Builder(ExamesActivity.this);
                 ad.setTitle("Informação") //
-                        .setMessage("Os Exames baixados ficam guardados no seu telefone em uma pasta nomeada: \n \nExames-App \n\nNota: Brevemente seram adicionadas as respectivas guias.") //
+                        .setMessage("Os Exames baixados ficam guardados no seu telefone em uma pasta denominada: \n \nExames-App.") //
 
                         .setPositiveButton(getString(R.string.ok_forDialog), new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
@@ -233,8 +240,51 @@ public class ExamesActivity extends AppCompatActivity {
             }
         });
 
-    }//end of the onCreate Method
+//        tvFeedback.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                AlertDialog.Builder feed = new AlertDialog.Builder(ExamesActivity.this);
+//                feed.setTitle("Feedback") //
+//                        .setMessage("•Tem alguma dúvida?\n•Encontrou um erro?\n•Não encontrou o Enunciado/Guia que procurava?\n•Quer ajudar?")
+//                        .setPositiveButton("Contactar o desenvolvedor.", new DialogInterface.OnClickListener() {
+//                            public void onClick(DialogInterface dialog, int id) {
+//
+//                                // boolean to check if whatsapp is already installed on the mobile device:
+//                                boolean isAppInstalled = appInstalledOrNot("com.whatsapp");
+//
+//                                //Check if whatsapp is installed:
+//                                if(isAppInstalled) {
+//                                //This intent will help you to launch if the package is already installed
+//                                Uri uri = Uri.parse("smsto:" + "840379185");
+//                                Intent i = new Intent(Intent.ACTION_SENDTO, uri);
+//                                i.putExtra("sms_body", "");
+//                                i.setPackage("com.whatsapp");
+//                                startActivity(i);
+//
+//                                }else
+//                                {
+//                                    //send and email instead:
+//                                    String email = "kishan_jadav@hotmail.com";
+//                                    String subject = "Exames-App";
+//                                    String body = "Olá Kishan, ";
+//                                    String chooserTitle = "Chooser Title";
+//
+//                                    Intent emailIntent = new Intent(Intent.ACTION_SEND, Uri.parse("mailto:" + email));
+//                                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
+//                                    emailIntent.putExtra(Intent.EXTRA_TEXT, body);
+//                                    //emailIntent.putExtra(Intent.EXTRA_HTML_TEXT, body); //If you are using HTML in your body text
+//                                    startActivity(Intent.createChooser(emailIntent, "Chooser Title"));
+//
+//                                    dialog.dismiss();
+//                                }
+//                                dialog.dismiss();
+//                            }
+//                        });
+//                feed.show();
+//            }
+//        });
 
+    }//end of the onCreate Method
 
 
     //Text Formatting stuff
@@ -270,17 +320,31 @@ public class ExamesActivity extends AppCompatActivity {
                 .start();
     }
 
-    //What happens when a "PDF" file from the FileBrowser is choosen/click? Well, this happens:
+    //What happens when a "PDF" file from the FileBrowser is choosen/clicked? Well, this happens:
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == 1 && resultCode == RESULT_OK) {
+            File root = android.os.Environment.getExternalStorageDirectory();
+            File dire = new File(root.getAbsolutePath() + "/Exames-App/Guias");
+            String guiaPDFDir = dire.toString();
+
             String filePath = data.getStringExtra(FilePickerActivity.RESULT_FILE_PATH);
+
+            String guiaPath = "/Guia-" + filePath.substring(filePath.lastIndexOf("/") + 1);
+
+            String finalGuiaPath = guiaPDFDir + guiaPath  ;
+
+            Log.v("TAG", "guiaPath: " + guiaPath);
+            Log.v("TAG", "guiaPDFDir: " + guiaPDFDir);
+
+            Log.v("TAG", "finalGuiaPath: " + finalGuiaPath);
             // Do anything with filePath, that is, file.
 
             Intent executeExamesGo = new Intent(ExamesActivity.this, ExamesGoActivity.class);
             executeExamesGo.putExtra("FILE_PDF", filePath);
+            executeExamesGo.putExtra("GUIA_PDF", finalGuiaPath);
             startActivity(executeExamesGo);
         }
         else if(requestCode == 0 && resultCode == RESULT_CANCELED){
@@ -296,16 +360,13 @@ public class ExamesActivity extends AppCompatActivity {
         new AlertDialog.Builder(ExamesActivity.this)
                 .setTitle("Download")
                 .setMessage("O Exame que foi selecionado: " + "\n\n" + "Classe: " + Classe + "\n" + "Disciplina: " + Disciplina + "\n" + "Ano: " + Ano + "\n" + "Época: " + Epoca)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                .setPositiveButton("Enunciado", new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int whichButton) {
-                        Toast.makeText(ExamesActivity.this, "Download Iniciado", Toast.LENGTH_SHORT).show();
 
-                        progressDialog.show();
-
-                        //How the dir in database should look: "Disciplina/Classe/Ano-Epoca.ext"
+                        //How the Enunciado dir in database should look: "Disciplina/Classe/Ano-Epoca.ext"
                         pdfRef = mStorageRef.child(Disciplina + "/" + Classe + "/" + Ano + "-" + Epoca + ".pdf");
-                        File root = android.os.Environment.getExternalStorageDirectory();
+                        File root = Environment.getExternalStorageDirectory();
                         final File dir = new File(root.getAbsolutePath() + "/Exames-App/");
 
                         if (!dir.exists()) {
@@ -315,58 +376,146 @@ public class ExamesActivity extends AppCompatActivity {
                         //set the Download location as well as it name
                         localFile = new File(dir, Disciplina + "-" + Ano + "-" + Classe + "-" + Epoca + ".pdf");
 
-                        //Start the download
-                        downloadTask = (FileDownloadTask) pdfRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-                            @Override
-                            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                                // Local temp file has been created
-                                progressDialog.dismiss();
-                                Toast.makeText(ExamesActivity.this, "Exame foi baixado com sucesso!️", Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception exception) {
-                                // Handle any errors
-                                progressDialog.dismiss();
+                        //Fisrt check if the Enunciado exists in the folder.
+                        if(localFile.exists()){
+                            //If enunciado exists in the directory:
+                            Toast.makeText(ExamesActivity.this, "Já tens este enunciado!", Toast.LENGTH_SHORT).show();
+                        }else if(!(localFile.exists())){
+                            //If enunciado does not exist in the directory:
+                            Toast.makeText(ExamesActivity.this, "Download Iniciado", Toast.LENGTH_SHORT).show();
+                            progressDialog.show();
 
-                                if (!(downloadTask.isCanceled())){
-                                    Toast.makeText(ExamesActivity.this, "Exame não encontrado no servidor.", Toast.LENGTH_LONG).show();
-                                    Log.e("TAG", "simpsons: " + exception);
+                            //Start the download
+                            downloadTask = (FileDownloadTask) pdfRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                                @Override
+                                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                                    // Local temp file has been created
+                                    progressDialog.dismiss();
+                                    Toast.makeText(ExamesActivity.this, "Enunciado foi baixado com sucesso!️", Toast.LENGTH_SHORT).show();
                                 }
-                            }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception exception) {
+                                    // Handle any errors
+                                    progressDialog.dismiss();
 
-                        }).addOnProgressListener(new OnProgressListener<FileDownloadTask.TaskSnapshot>() {
-                            @Override
-                            public void onProgress(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                                //Some math to get the Percentage of the Download :)
-                                double progressPercentage = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
+                                    if (!(downloadTask.isCanceled())){
+                                        Toast.makeText(ExamesActivity.this, "Enunciado não encontrado no servidor.", Toast.LENGTH_LONG).show();
+                                        Log.e("TAG", "simpsons: " + exception);
+                                    }else if(downloadTask.isCanceled()){
+                                        localFile.delete();
+                                        Log.v("TAG", "simpsons: deleted");
+                                    }
 
-                                long rawFileSize = taskSnapshot.getTotalByteCount();
-
-                                if(rawFileSize <= 999999){
-                                    long sizeInKB = rawFileSize / 1000;
-                                    progressDialog.setMessage("Tamanho: " + sizeInKB + "KB" + "\n" + "Progresso: " +((int) progressPercentage)+"%" + "\n" + "\n" + "Se o download levar mais de 3 minutos para iniciar, verifique a sua conexao com a internet!");
                                 }
-                                else if(rawFileSize > 999999){
-                                    long sizeInMB = rawFileSize / 1000000;
-                                    progressDialog.setMessage("Tamanho: " + sizeInMB + "MB" + "\n" + "Progresso: " + ((int) progressPercentage)+"%" + "\n" + "\n"+ "Se o download levar mais de 3 minutos para iniciar, verifique a sua conexao com a internet!");
-                                }
-                            }
-                        });
 
-                        //Cancel Button on the Alert Dialog:
+                            }).addOnProgressListener(new OnProgressListener<FileDownloadTask.TaskSnapshot>() {
+                                @Override
+                                public void onProgress(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                                    //Some math to get the Percentage of the Download :)
+                                    double progressPercentage = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
+
+                                    long rawFileSize = taskSnapshot.getTotalByteCount();
+
+                                    if(rawFileSize <= 999999){
+                                        long sizeInKB = rawFileSize / 1000;
+                                        progressDialog.setMessage("Tamanho: " + sizeInKB + "KB" + "\n" + "Progresso: " +((int) progressPercentage)+"%" + "\n" + "\n" + "Se o download levar mais de 3 minutos para iniciar, verifique a sua conexao com a internet!");
+                                    }
+                                    else if(rawFileSize > 999999){
+                                        long sizeInMB = rawFileSize / 1000000;
+                                        progressDialog.setMessage("Tamanho: " + sizeInMB + "MB" + "\n" + "Progresso: " + ((int) progressPercentage)+"%" + "\n" + "\n"+ "Se o download levar mais de 3 minutos para iniciar, verifique a sua conexao com a internet!");
+                                    }
+                                }
+                            });
+
+
+                        }//end of exist
                     }})
-                .setNegativeButton(android.R.string.no, null)
+
+                //Cancel Button on the Alert Dialog:
+                .setNeutralButton(android.R.string.no, null)
+
+
+                .setNegativeButton("Guia", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        //How the Enunciado dir in database should look: "Disciplina/Classe/Ano-Epoca.ext"
+                        guiasRef = mStorageRef.child("Guias" + "/" + Disciplina + "/" + Classe + "/" + Ano + "-" + Epoca + ".pdf");
+                        File root = Environment.getExternalStorageDirectory();
+                        final File dir = new File(root.getAbsolutePath() + "/Exames-App/Guias");
+
+                        if (!dir.exists()) {
+                            dir.mkdir();
+                        }
+
+                        //set the Download location as well as it name
+                        localguiaFile = new File(dir,"Guia" + "-" + Disciplina + "-" + Ano + "-" + Classe + "-" + Epoca + ".pdf");
+
+
+                        //Check if the file exists before downloading:
+                        if(localguiaFile.exists()){
+                            //The file exists:
+                            Toast.makeText(ExamesActivity.this, "Já tens esta guia.", Toast.LENGTH_SHORT).show();
+                        }else if(!(localguiaFile.exists())){
+                            //Nope, the file does not exist in the directory
+                            Toast.makeText(ExamesActivity.this, "Download Iniciado", Toast.LENGTH_SHORT).show();
+                            progressDialog.show();
+
+                            //Start the download
+                            downloadTask = (FileDownloadTask) guiasRef.getFile(localguiaFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                                @Override
+                                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                                    // Local temp file has been created
+                                    progressDialog.dismiss();
+                                    Toast.makeText(ExamesActivity.this, "Guia foi baixado com sucesso!️", Toast.LENGTH_SHORT).show();
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception exception) {
+                                    // Handle any errors
+                                    progressDialog.dismiss();
+
+                                    if (!(downloadTask.isCanceled())){
+                                        Toast.makeText(ExamesActivity.this, "Guia não encontrado no servidor.", Toast.LENGTH_LONG).show();
+                                        Log.e("TAG", "simpsons: " + exception);
+                                    }else if(downloadTask.isCanceled()){
+                                        localFile.delete();
+                                        Log.v("TAG", "simpsons: deleted");
+                                    }
+
+                                }
+
+                            }).addOnProgressListener(new OnProgressListener<FileDownloadTask.TaskSnapshot>() {
+                                @Override
+                                public void onProgress(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                                    //Some math to get the Percentage of the Download :)
+                                    double progressPercentage = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
+
+                                    long rawFileSize = taskSnapshot.getTotalByteCount();
+
+                                    if(rawFileSize <= 999999){
+                                        long sizeInKB = rawFileSize / 1000;
+                                        progressDialog.setMessage("Tamanho: " + sizeInKB + "KB" + "\n" + "Progresso: " +((int) progressPercentage)+"%" + "\n" + "\n" + "Se o download levar mais de 3 minutos para iniciar, verifique a sua conexao com a internet!");
+                                    }
+                                    else if(rawFileSize > 999999){
+                                        long sizeInMB = rawFileSize / 1000000;
+                                        progressDialog.setMessage("Tamanho: " + sizeInMB + "MB" + "\n" + "Progresso: " + ((int) progressPercentage)+"%" + "\n" + "\n"+ "Se o download levar mais de 3 minutos para iniciar, verifique a sua conexao com a internet!");
+                                    }
+                                }
+                            });
+                        }//end of exist
+                    }
+                })
                 .show();
 
     }
 
 
-
 //These FOUR "Overrided Methods" bellow, are solely for checking the permission on Run Time for ANDROID_MARSHMALLOW(sdk 23) and above:
     @NeedsPermission({Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE})
     void getFilee() {
-        //if the Permission is grant:
+        //if HOPEFULLY the Permission has been granted by the user. Phew..:
         downloadExame();
     }
 
@@ -406,6 +555,22 @@ public class ExamesActivity extends AppCompatActivity {
         Toast.makeText(this, "Permissão foi negada. Vá para as Definições do app para aceitar manualmente.", Toast.LENGTH_SHORT).show();
     }
 //Those FOUR "Overrided Methods" above, are solely for checking the permission on Run Time for ANDROID_MARSHMALLOW(sdk 23) and above:
+
+
+
+
+//    //Check if whatsapp is installed:
+//    private boolean appInstalledOrNot(String uri) {
+//        PackageManager pm = getPackageManager();
+//        try {
+//            pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
+//            return true;
+//        } catch (PackageManager.NameNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//
+//        return false;
+//    }
 
 
 

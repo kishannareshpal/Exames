@@ -92,22 +92,6 @@
                 android:layout_gravity="right"
                 android:layout_marginTop="7dp">
 
-                <!--<Button-->
-                    <!--android:text="@string/DownloadButton"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:id="@+id/bDownload"-->
-                    <!--android:layout_weight="1" />-->
-
-                <!--<Button-->
-                    <!--android:text="@string/Look"-->
-                    <!--android:id="@+id/bLook"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_gravity="end"-->
-                    <!--android:backgroundTint="@color/light_red"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:layout_width="wrap_content" />-->
-
                 <mehdi.sakout.fancybuttons.FancyButton
                     android:id="@+id/bDownload"
                     android:layout_width="wrap_content"
@@ -162,6 +146,17 @@
         android:id="@+id/tvInfo"
         android:textColor="@color/white"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true"
+        android:textStyle="normal|italic" />
+
+    <!--<TextView-->
+        <!--android:text="feedback"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/tvFeedback"-->
+        <!--android:textColor="@color/forMedia"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
 
 </RelativeLayout>
