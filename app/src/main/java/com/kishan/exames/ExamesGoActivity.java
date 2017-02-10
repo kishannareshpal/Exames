@@ -76,7 +76,7 @@ public class ExamesGoActivity extends AppCompatActivity {
                         .onLoad(new OnLoadCompleteListener() {
                             @Override
                             public void loadComplete(int nbPages) {
-                                Toast.makeText(ExamesGoActivity.this, "Enunciado aberto.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ExamesGoActivity.this, "Aberto com sucesso.", Toast.LENGTH_SHORT).show();
                             }
                         })
                         .onError(new OnErrorListener() {
@@ -101,7 +101,6 @@ public class ExamesGoActivity extends AppCompatActivity {
         File doesTheFileExist = new File(filee);
 
         if(doesTheFileExist.exists()){
-            Toast.makeText(this, "Guia, acima disponível...", Toast.LENGTH_SHORT).show();
 
             FileInputStream fileeinspit = null;
             try {
@@ -113,6 +112,12 @@ public class ExamesGoActivity extends AppCompatActivity {
                         .enableDoubletap(true)
                         .defaultPage(0)
                         .enableAnnotationRendering(false)
+                        .onLoad(new OnLoadCompleteListener() {
+                            @Override
+                            public void loadComplete(int nbPages) {
+                                Toast.makeText(ExamesGoActivity.this, "Guia, acima disponível...", Toast.LENGTH_SHORT).show();
+                            }
+                        })
                         .onError(new OnErrorListener() {
                             @Override
                             public void onError(Throwable t) {
