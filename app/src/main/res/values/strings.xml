@@ -12,6 +12,9 @@
     <string name="tvQ1">O que procuras?</string>
 
     <!--ExamesActivity-->
+        <!--AlertDialog Strings-->
+
+
     <string name="GradeHint">selecione a classe</string>
     <string name="YearHint">selecione o ano</string>
     <string name="SubjectHint">selecione a disciplina</string>
