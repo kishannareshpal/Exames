@@ -23,9 +23,12 @@
 ##### v1.3:
 - Guias now available to download! You may now access it via the Enunciado file (Only if you have it downloaded). Or open it directly.
 - Fixed a download bug where when the user clicked the cancel button, the portions of the file still remained.
-- Added Feedback button.
+- Added Feedback button (For Beta testers only).
 - Now checks if the file exists before downloading. If the file exists, than it won't download.
 - Maybe added/forgot_to_fix some more bugs. Dunno :) You will found out on the next release.
+
+##### v1.3.1:
+- Fixed the Guia Sliding Panel being stuck in the middle. And some other technical stuff.
 
 
 
