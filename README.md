@@ -36,7 +36,7 @@
   Made by a Student for Students. This will definetely help you study for exams!
 
 ...............................
-### FAQ!  
+### FAQ! Well not really. These are just some additional stuff:
 ##### Where are the files/exams i downloaded, located/saved?  
   All of the files are stored into the root of the "Internal/External Storage" of your phone. It will create a folder called <b>"Exames-App"</b> where everything will be stored.
 
