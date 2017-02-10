@@ -61,7 +61,7 @@
 
 
 ### What else can this app do?  
-> It can also calculate your averages if you are into it.
+> It can also calculate your averages if you are into that kind of stuff.
 
 
 ### Do you plan to add more features to this app?  
