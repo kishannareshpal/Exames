@@ -82,7 +82,6 @@ public class ExamesActivity extends AppCompatActivity {
         spDisciplina = (Spinner) findViewById(R.id.spDisciplina);
         spEpoca = (Spinner) findViewById(R.id.spEpoca);
         mRef = new Firebase("https://examesproject.firebaseio.com/Anos");
-        anosArray = new ArrayList<>();
         mStorageRef = FirebaseStorage.getInstance().getReference();
         bDownload = (FancyButton) findViewById(R.id.bDownload);
 //        tvFeedback = (TextView) findViewById(R.id.tvFeedback);
@@ -97,24 +96,33 @@ public class ExamesActivity extends AppCompatActivity {
 
         progressDialog = new ProgressDialog(this);
 
-        //hiding the TryAgain (tvTA) TextView:
-
         //Calling Adapter:
         adapterClasse = ArrayAdapter.createFromResource(this, R.array.arClasse, android.R.layout.simple_spinner_dropdown_item);
         adapterDisc10 = ArrayAdapter.createFromResource(this, R.array.arDisciplina10, android.R.layout.simple_spinner_dropdown_item);
         adapterDisc12 = ArrayAdapter.createFromResource(this, R.array.arDisciplina12, android.R.layout.simple_spinner_dropdown_item);
         adapterEpoca = ArrayAdapter.createFromResource(this, R.array.arEpoca, android.R.layout.simple_spinner_dropdown_item);
         adapterNull = ArrayAdapter.createFromResource(this, R.array.arNull, android.R.layout.simple_spinner_dropdown_item);
+        anosArray = new ArrayList<>();
 
 
         //Setting Adapter with Firebase:
         //Anos Adapter
-        //1st: Add "SOME_YEARS" for Error reasons.
+        //1st: Add "STOCK_Years" otherwise an error will struck.
         anosArray.add("...");
+        anosArray.add("2000");
+        anosArray.add("2001");
+        anosArray.add("2002");
+        anosArray.add("2003");
+        anosArray.add("2005");
+        anosArray.add("2009");
         anosArray.add("2011");
         anosArray.add("2012");
         anosArray.add("2013");
         anosArray.add("2014");
+        anosArray.add("2015");
+        anosArray.add("2016");
+
+
 
 
         //2nd: Get the value
@@ -205,7 +213,7 @@ public class ExamesActivity extends AppCompatActivity {
                 //First Check if ON the Spinner, everything is checked. It should be. If not, show error Toast.
                 if (Classe.equals("...") | Epoca.equals("...") | Disciplina.equals("...") | Ano.equals("...") | Ano.equals("")) {
                         //Show the The Error Toast:
-                        Toast.makeText(ExamesActivity.this, "Todas as opçoes devem ser escolhidas.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ExamesActivity.this, "Todas as opções devem ser escolhidas.", Toast.LENGTH_SHORT).show();
 
                 } else {
                         ExamesActivityPermissionsDispatcher.getFileeWithCheck(temp);
@@ -229,7 +237,7 @@ public class ExamesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 AlertDialog.Builder ad = new AlertDialog.Builder(ExamesActivity.this);
                 ad.setTitle("Informação") //
-                        .setMessage("Os Exames baixados ficam guardados no seu telefone em uma pasta denominada: \n \nExames-App.") //
+                        .setMessage("Os Exames baixados ficam guardados no armazenamento do seu telemóvel em uma pasta com o nome: \n \nExames-App.\n\nDica: Utiliza esse directório para compartilhar/imprimir/apagar os exames.") //
 
                         .setPositiveButton(getString(R.string.ok_forDialog), new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
