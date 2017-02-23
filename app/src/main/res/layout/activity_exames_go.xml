@@ -52,13 +52,13 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:text="Possíveis causas desta mensagem:\n1- Nao tens o guia deste enunciado. Volta lá e baixe.\n\n2- Abriste um guia."
+                    android:text="Possíveis causas desta mensagem:\n1- Nao tens o guia deste enunciado. Volta lá e baixe.\n2- Abriste um guia."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/tvNotice"
                     android:layout_weight="0.5"
                     android:textStyle="normal|bold|italic"
-                    android:textSize="18sp"
+                    android:textSize="14sp"
                     android:textColor="@color/light_red"
                     android:layout_gravity="bottom"
                     android:gravity="bottom"
