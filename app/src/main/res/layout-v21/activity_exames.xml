@@ -2,6 +2,7 @@
 <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:fancy="http://schemas.android.com/apk/res-auto"
+
     android:id="@+id/activity_exames"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,38 +15,60 @@
 
     fancy:corner_radius="6dp">
 
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btGetBackTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="22dp"
+        android:elevation="5dp"
+        android:gravity="center_vertical"
+        android:paddingRight="8dp"
+        android:transitionName="transExames"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="@color/white"
+        fancy:fb_focusColor="@color/lightish_grey"
+        fancy:fb_fontIconResource="&#xf060;"
+        fancy:fb_iconPosition="left"
+        fancy:fb_radius="22dp"
+        fancy:fb_text="voltar"
+        fancy:fb_textColor="@color/greyish_green"
+        fancy:fb_textSize="18sp"
+    />
+
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:gravity="center">
 
             <TextView
-                android:id="@+id/tvClasse"
+                android:text="selecione a classe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="selecione a classe"
-                android:textAllCaps="false"
+                android:id="@+id/tvClasse"
                 android:textColor="@color/white"
-                android:textStyle="normal|bold|italic" />
+                android:textStyle="normal|bold|italic"
+                android:textAllCaps="false"
+                />
 
             <Spinner
                 android:id="@+id/spClasse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                android:spinnerMode="dialog" />
+                android:elevation="4dp" />
 
             <TextView
-                android:id="@+id/tvDisciplina"
+                android:text="@string/SubjectHint"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/SubjectHint"
+                android:id="@+id/tvDisciplina"
                 android:textColor="@color/white"
                 android:textStyle="normal|bold|italic" />
 
@@ -54,13 +77,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
+                android:elevation="4dp"
                 android:spinnerMode="dialog" />
 
             <TextView
-                android:id="@+id/tvAno"
+                android:text="@string/YearHint"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/YearHint"
+                android:id="@+id/tvAno"
                 android:textColor="@color/white"
                 android:textStyle="normal|bold|italic" />
 
@@ -69,48 +93,52 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
+                android:elevation="4dp"
                 android:spinnerMode="dialog" />
 
             <TextView
-                android:id="@+id/tvEpoca"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/EpocaHint"
-                android:textAllCaps="false"
+                android:id="@+id/tvEpoca"
                 android:textColor="@color/white"
-                android:textStyle="normal|bold|italic" />
+                android:text="@string/EpocaHint"
+                android:textStyle="normal|bold|italic"
+                android:textAllCaps="false" />
 
             <Spinner
                 android:id="@+id/spEpoca"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white" />
+                android:background="@color/white"
+                android:elevation="4dp" />
 
             <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:layout_marginTop="7dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="7dp">
 
                 <TextView
                     android:id="@+id/tvInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentRight="false"
                     android:layout_gravity="center_vertical"
                     android:paddingBottom="7dp"
                     android:paddingLeft="7dp"
-                    android:paddingRight="15dp"
+                    android:paddingRight="30dp"
                     android:paddingTop="7dp"
                     android:text="• info"
                     android:textColor="@color/white"
                     android:textStyle="normal|italic"
-                    android:layout_weight="0.63" />
+                    android:layout_weight="0.45" />
 
                 <Space
-                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.97" />
+                    android:layout_weight="0.97"
+                    android:layout_width="wrap_content" />
 
                 <mehdi.sakout.fancybuttons.FancyButton
                     android:id="@+id/bDownload"
@@ -124,7 +152,7 @@
                     android:paddingRight="20dp"
                     android:paddingTop="9dp"
                     fancy:fb_defaultColor="@color/download_buton"
-                    fancy:fb_focusColor="@color/lightish_grey"
+                    fancy:fb_focusColor="#eaeaea"
                     fancy:fb_radius="8dp"
                     fancy:fb_text="@string/DownloadButton"
                     fancy:fb_textColor="#000000"
@@ -139,7 +167,6 @@
                     android:layout_gravity="center_vertical"
                     android:addStatesFromChildren="false"
                     android:animateLayoutChanges="false"
-                    android:elevation="12dp"
                     android:gravity="center"
                     android:paddingBottom="9dp"
                     android:paddingLeft="22dp"
@@ -153,6 +180,7 @@
                     fancy:fb_textSize="14sp" />
 
 
+
             </LinearLayout>
 
             <com.google.android.gms.ads.AdView
@@ -160,7 +188,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginTop="9dp"
+                android:layout_marginTop="10dp"
                 fancy:adSize="BANNER"
                 fancy:adUnitId="@string/banner_adId" />
 

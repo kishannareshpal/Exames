@@ -25,16 +25,51 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <TextView
-            android:text="@string/tvQ1"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvQuestion"
-            android:textColor="@color/white"
-            android:textStyle="normal|bold|italic"
-            android:textAlignment="center"
             android:gravity="center"
-            android:textSize="18sp" />
+            android:weightSum="1">
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btGetBack"
+                fancy:fb_defaultColor="@color/greyish_green"
+                fancy:fb_focusColor="#292929"
+                fancy:fb_radius="50dp"
+                fancy:fb_textColor="@color/white"
+                fancy:fb_fontIconResource="&#xf060;"
+                fancy:fb_text=""
+                android:animateLayoutChanges="false"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                fancy:fb_textSize="14dp"
+                android:transitionName="trans"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:paddingEnd="2dp"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="35dp" />
+
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.13"
+                android:gravity="center"
+                android:text="@string/tvQ1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic" />
+        </LinearLayout>
 
         <mehdi.sakout.fancybuttons.FancyButton
             android:id="@+id/btExames"
@@ -46,15 +81,15 @@
             android:paddingTop="9dp"
             fancy:fb_borderWidth="1dp"
             fancy:fb_defaultColor="@color/white"
-            fancy:fb_focusColor="@color/very_light_grey"
+            fancy:fb_focusColor="@color/lightish_grey"
             fancy:fb_iconPosition="left"
             fancy:fb_radius="100dp"
             fancy:fb_textSize="18sp"
             fancy:fb_text="@string/btExams"
             fancy:fb_textColor="@color/greyish_green"
             android:layout_gravity="center_vertical"
-            android:layout_margin="5dp">
-
+            android:layout_margin="5dp"
+            android:transitionName="transExames">
         </mehdi.sakout.fancybuttons.FancyButton>
 
         <LinearLayout

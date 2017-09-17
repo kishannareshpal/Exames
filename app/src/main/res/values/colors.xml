@@ -4,14 +4,24 @@
     <color name="colorPrimaryDark">#0d0d0d</color>
     <color name="colorAccent">#fc324a</color>
 
+    <color name="background">#059925</color>
 
     <color name="black">#000000</color>
     <color name="dark_grey">#202020</color>
-    <color name="very_light_grey">#969696</color>
-    <color name="white">#ffffff</color>
-    <color name="light_red">#fc324a</color>
+    <color name="darker_grey">#181818</color>
+    <color name="greyish_green">#444a44</color>
+    <color name="very_light_grey">#b4b4b4</color>
+    <color name="download_buton">#efefef</color>
+    <color name="white">#fff</color>
+    <color name="light_red">#ff464c</color>
     <color name="skinny_blue">#6eb9d4</color>
+
 
     <color name="forAbout">#3f4651</color>
     <color name="forMedia">#314c76</color>
+    <color name="lightish_grey">#b8b8b8</color>
+
+    <color name="noColor">#00000000</color>
+    <color name="dialog_header">#059925</color>
+
 </resources>

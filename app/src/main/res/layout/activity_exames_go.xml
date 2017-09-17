@@ -12,8 +12,8 @@
     android:background="@color/dark_grey"
 
     android:gravity="top"
-    app:umanoPanelHeight="22.5dp"
-    app:umanoShadowHeight="5dp"
+    app:umanoPanelHeight="22dp"
+    app:umanoShadowHeight="6dp"
     app:umanoDragView="@+id/dragView">
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -52,7 +52,7 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:text="Possíveis causas desta mensagem:\n1- Nao tens o guia deste enunciado. Volta lá e baixe.\n2- Abriste um guia."
+                    android:text="@string/notice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/tvNotice"

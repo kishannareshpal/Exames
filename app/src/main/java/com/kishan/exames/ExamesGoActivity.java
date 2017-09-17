@@ -23,6 +23,9 @@ import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnDrawListener;
 import com.github.barteksc.pdfviewer.listener.OnErrorListener;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.sothree.slidinguppanel.ScrollableViewHelper;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
@@ -39,12 +42,28 @@ public class ExamesGoActivity extends AppCompatActivity {
     private SlidingUpPanelLayout slideUp;
     private TextView pushtext, notice;
     private LinearLayout lere;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_exames_go);
+
+        mInterstitialAd = new InterstitialAd(ExamesGoActivity.this);
+        mInterstitialAd.setAdUnitId(getString(R.string.intersticial_adId));
+        mInterstitialAd.loadAd(new AdRequest.Builder()
+                .build());
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                if(mInterstitialAd.isLoaded()){
+                    mInterstitialAd.show();
+                }else{
+                    Log.d("adMan", "woah, intersticial ad was not loaded man!");
+                }
+            }
+        });
 
         // init the PDFView:
         pdfView = (PDFView) findViewById(R.id.pdfView);
@@ -167,7 +186,7 @@ public class ExamesGoActivity extends AppCompatActivity {
                 public void run() {
                     doubleBackToExitPressedOnce=false;
                 }
-            }, 2000);
+            }, 1800);
 
        /* super.onBackPressed();*/
     }
