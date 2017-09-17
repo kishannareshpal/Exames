@@ -1,18 +1,30 @@
 <resources>
     <string name="app_name">Exames</string>
 
+    <!-- Android-About-Page -->
+    <string name="about_contact_us">Envie-nos um email.</string>
+    <string name="about_facebook">Deixe um like e/ou fale conosco.</string>
+    <string name="about_play_store">Avalie-nos no Play Store.</string>
+    <string name="about_website">Visite o nosso site.</string>
+
+
+    <!--Ads-->
+    <string name="intersticial_adId">ca-app-pub-2181029585862550/6936446826</string>
+    <string name="banner_adId">ca-app-pub-2181029585862550/9588862026</string>
+
     <!--WelcomeActivity-->
-    <string name="WelcomeMsg">Ola, caro estudante.</string>
+    <string name="WelcomeMsg">Ola caro estudante.</string>
     <string name="aboutbutton"><b>sobre</b></string>
     <string name="btGetStarted">></string>
 
-    <!--//MainActivity-->
+    <!--MainActivity-->
     <string name="btExams">Exames</string>
-    <string name="btMedias">Médias</string>
+    <string name="btMeusExames">Meus Exames</string>
     <string name="tvQ1">O que procuras?</string>
 
-    <!--ExamesActivity-->
-        <!--AlertDialog Strings-->
+    <!--ExamesGoActivity-->
+    <string name="notice">Possíveis causas desta mensagem:\n1- Nao tens o guia deste enunciado. Volte, baixe o guia e re-abra este enunciado para veres o guia aqui.\n2- Abriste um guia.</string>
+    <!--AlertDialog Strings-->
 
 
     <string name="GradeHint">selecione a classe</string>
@@ -20,7 +32,7 @@
     <string name="SubjectHint">selecione a disciplina</string>
     <string name="EpocaHint">selecione a época</string>
     <string name="DownloadButton">Baixar</string>
-    <string name="Look"> ❑‿❑ </string>
+    <string name="Look">Meus exames</string>
     <string name="try_again"><u><b><i>Tentar novamente. Clique aqui!</i></b></u></string>
 
     <string name="ok_forDialog">Okay</string>
@@ -28,29 +40,17 @@
     <!--MediasActivity-->
     <string name="Media10a"><b>10a Classe</b></string>
     <string name="Media12a">12a Classe</string>
-    <string name="tvQ2">Média anual da?</string>
-
-        <!--media10Activity-->
-        <!--TODO: add description on about how to calculate the overall-->
-
-        <string name="hindMedia8">insira a média anual da 8a Classe</string>
-        <string name="hindMedia9">insira a média anual da 9a Classe</string>
-        <string name="hindMedia10">insira a média anual da 10a Classe</string>
-
-
-        <!--media12Activity-->
-        <string name="tvInfo">Para calcular a média da 12a classe: <b>multiplique por 2
-        a Média Anual da 12a Classe, e adicione o resultado com a Média Anual da 11a Classe. E por fim,
-        divide o resultado por 3.</b></string>
-
-        <string name="hintMedia11">insira a média anual da 11a Classe</string>
-        <string name="hintMedia12">insira a média anual da 12a Classe</string>
 
 
     <!--AboutActivity-->
-    <string name="about"><u>Este aplicativo foi criado por dois Ex-Estudantes da Escola S.
-    Emília Daússe de Inhambane, com o objectivo de lhe facilitar na busca de exames anteriores.
-    Bons Estudos.</u></string>
+    <string name="about">
+        <u>
+            Este aplicativo foi desenvolvido com uni e exclusivo objectivo de facilitar-lhe na busca de exames nacionais a qualquer momento. Bons Estudos!\n\n
+            •Tens algum exame que pode nos fornecer? Notou alguma falha nos exames? Por favor contacte-nos atraves do nosso Facebook ou email. Vamos juntos fazer deste app a maior e a melhor plataforma de exames de Moçambique e do Mundo :)
+        </u>
+    </string>
+
+    <string name="copy_right">Made with ❤ by Kishan Nareshpal.</string>
 
 
     <!--SPINNERS:-->
@@ -107,18 +107,369 @@
         <item>Filosofia</item>
     </string-array>
 
-    <!--Null-->
+    <!--Null string-->
     <string-array name="arNull">
         <item>...</item>
     </string-array>
 
 
     <!--AboutPage-->
-    <string name="Licenses">THE FOLLOWING SETS FORTH ATTRIBUTION NOTICES FOR THIRD PARTY SOFTWARES AND/OR SERVICES
-    THAT MAY BE CONTAINED IN PORTIONS OF THE EXAMES-MOÇAMBIQUE PRODUCT. \n......\n\nThe following softwares
-        may be included in this product:\nFirebase by Google.\nFasterXML by Jackson\nMaterialFile
-        Picker by nbsp-team.\nPermissionDispatcher by hotchemi.\nAndroid-About-Page by Medyo.\n \nPlease refer to the Product GitHub page listed in the about section of the app for detailed
-        licensing information for individual Softwares and Services.\n\nThank you for downloading this app.\nKishan Nareshpal Jadav.
+    <string name="Licenses">O SEGUINTE DISPÕE AVISOS DE ATRIBUIÇÃO PARA SOFTWARE DE TERCEIROS E/OU SERVIÇOS PRESTADOS POR TAIS, QUE PODEM ESTAR CONTIDOS EM PORÇÕES NO PRODUTO EXAMES-MOÇAMBIQUE. PARA A VERIFICAÇÃO DETALHADA DAS LICENÇAS DE USO DOS SOFTWARES DE TERCEIROS POR FAVOR CLIQUE NO BUTÃO LICENÇA INDIVIDUAL.\n\nOs seguintes softwares estão incorporados neste produto:\nFirebase por Google.\nMaterialFilePicker por nbsp-team.\nPermissionsDispatcher por hotchemi.\nAndroid-About-Page  Fancy Button por medyo.\nSliding Up Panels por sothree.\nFlowingGradient por dinamitechetan.\nRound Korner Layouts por jcminarro.\nAndroid-PDF-Viewer por bartekcs.\n\nAlguns direitos reservados. EXAMES-MOÇAMBIQUE e o logo de EXAMES-MOÇAMBIQUE são marcas registradas por Kishan Nareshpal Jadav. Todas as outras marcas registadas são propriedades do seu respectivo proprietário.\n\n
+        »Muito obrigado ào MINISTÉRIO DE EDUCAÇÃO DE MOÇAMBIQUE, à dra. NÉLIA DOCE, ào SHEKIL NARESHPAL, ào STÉLIO BRAGA, à LECTÍCIA MOISÉS, ào dr. DIAS JOAQUIM, ào FRANCISCO JOÃO e à ASSUCENA ORLANDO pelo vosso imenso apoio para deixar o app onde hoje encontra-se. Muitíssimo obrigado novamente!
     </string>
+
+
+    <!--THIS-->
+
+    <!--Biologia-->
+    <string-array name="arBio10">
+        <item>...</item>
+        <item>2005</item>
+        <item>2009</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+    </string-array>
+
+    <string-array name="arBio12">
+        <item>...</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2016</item>
+    </string-array>
+
+
+    <!--Desenho-->
+    <string-array name="arDes12">
+        <item>...</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+    </string-array>
+
+
+    <!--Filosofia-->
+    <string-array name="arFil12">
+        <item>...</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2005</item>
+        <item>2009</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+    </string-array>
+
+
+    <!--Matematica-->
+    <string-array name="arMat10">
+        <item>...</item>
+        <item>2005</item>
+        <item>2009</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2016</item>
+    </string-array>
+
+    <string-array name="arMat12">
+        <item>...</item>
+        <item>2008</item>
+        <item>2009</item>
+        <item>2010</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2016</item>
+    </string-array>
+
+
+    <!--Portugues-->
+    <string-array name="arPort10">
+        <item>...</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2009</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+    </string-array>
+
+    <string-array name="arPort12">
+        <item>...</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2008</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2016</item>
+    </string-array>
+
+
+    <!--Fisica-->
+    <string-array name="arFis10">
+        <item>...</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2005</item>
+        <item>2009</item>
+        <item>2010</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+    </string-array>
+
+    <string-array name="arFis12">
+        <item>...</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2016</item>
+    </string-array>
+
+
+    <!--Frances-->
+    <string-array name="arFran12">
+        <item>...</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+    </string-array>
+
+
+    <!--Ingles-->
+    <string-array name="arIng10">
+        <item>...</item>
+        <item>2005</item>
+        <item>2009</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2016</item>
+    </string-array>
+
+    <string-array name="arIng12">
+        <item>...</item>
+        <item>2000</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+    </string-array>
+
+
+    <!--Geografia-->
+    <string-array name="arGeog10">
+        <item>...</item>
+        <item>2000</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2005</item>
+        <item>2009</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2016</item>
+    </string-array>
+
+    <string-array name="arGeog12">
+        <item>...</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+    </string-array>
+
+
+    <!--Historia-->
+    <string-array name="arHist10">
+        <item>...</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2009</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+    </string-array>
+
+    <string-array name="arHist12">
+        <item>...</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+    </string-array>
+
+
+    <!--Quimica-->
+    <string-array name="arQuim10">
+        <item>...</item>
+        <item>2009</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2016</item>
+    </string-array>
+
+    <string-array name="arQuim12">
+        <item>...</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+    </string-array>
+
+
+    <!--EPOCAS-->
+
+    <string-array name="onlyFirst">
+        <item>...</item>
+        <item>1a Epoca</item>
+    </string-array>
+
+    <string-array name="onlySecond">
+        <item>...</item>
+        <item>2a Epoca</item>
+    </string-array>
+
+
+    <!--CLASSES-->
+
+    <string-array name="onlyDecima">
+        <item>...</item>
+        <item>10a Classe</item>
+    </string-array>
+
+    <string-array name="onlyDecimaSegunda">
+        <item>...</item>
+        <item>12a Classe</item>
+    </string-array>
+    <string name="title_activity_settings">Preferencias</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <!--THAT-->
+
 
 </resources>

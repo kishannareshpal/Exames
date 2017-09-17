@@ -2,44 +2,84 @@ package com.kishan.exames;
 
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import com.dynamitechetan.flowinggradient.FlowingGradientClass;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 
 import mehdi.sakout.fancybuttons.FancyButton;
 
 
 public class WelcomeActivity extends AppCompatActivity {
 
-
     public FancyButton btAbout, btGetStarted;
+    public RelativeLayout r1;
+
+    //Serious money (ad) business. No, really, this is serious! Not sure why i didn't initialized it... hm!
+    private InterstitialAd mInterstitialAd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_welcome);
 
-            //calling functions:
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getWindow(); // in Activity's onCreate() for instance
+            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        }
+
+        //Setup AdMOB
+        MobileAds.initialize(WelcomeActivity.this, "ca-app-pub-2181029585862550/9588862026");
+
+        // Initialize AdviewBanner and start networking.
+        AdView adView = (AdView) findViewById(R.id.adVieww);
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+        adView.loadAd(adRequest);
+
+            //Call the functions:
             btGetStarted = (FancyButton) findViewById(R.id.btGetStarted);
             btAbout = (FancyButton) findViewById(R.id.btAbout);
+
+            //Call the background for flowing-gradient:
+            r1 = (RelativeLayout) findViewById(R.id.r1);
+            FlowingGradientClass grad = new FlowingGradientClass();
+            grad.setBackgroundResource(R.drawable.translate)
+                .onRelativeLayout(r1)
+                .setTransitionDuration(4000)
+                .start();
+
 
             //Formatting the button text programatically:
             btAbout.getTextViewObject().setText(fromHtml("<b>" + getString(R.string.aboutbutton) + "</b>"));
             btGetStarted.getTextViewObject().setText(fromHtml("<b>" + getString(R.string.btGetStarted) + "</b>"));
 
 
-            //On Avançar button clicked, open SelectionActivity:
+            //On Avançar (>) button clicked, open SelectionActivity:
             btGetStarted.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent executeSelection = new Intent(WelcomeActivity.this, MainActivity.class);
-                    startActivity(executeSelection);
+                    ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(WelcomeActivity.this, btGetStarted ,"trans");
+                    startActivity(executeSelection, optionsCompat.toBundle());
+
+
                 }
             });
 
@@ -51,7 +91,12 @@ public class WelcomeActivity extends AppCompatActivity {
                     startActivity(executeAboutActivity);
                 }
             });
+
+
+
         }
+
+
 
 
     //Text Formatting stuff
