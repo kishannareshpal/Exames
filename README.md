@@ -53,8 +53,8 @@
  > Ans: Not yet :(. The app will automatically find the appropriate one. Which has the most space. 
     
     > The file name will look like this: "Disciplina-Classe-Ano-Epoca.ext". 
-    > E.g: xxxxxx-1xa Classe-201x-x Epoca.pdf 
-    > //Where **X** can be a letter or a number.
+    > E.g: xxxxxx-1xa Classe-yyyy-z Epoca.pdf 
+    > //Where **x** is the subject name, **y** is the year and **z** is the epoca.
  
   > <b> Hint: You can use that location to delete/share/open the file.</b>
 
