@@ -4,7 +4,9 @@
 
 
 ### Download:
-> [![PlayStore](https://play.google.com/intl/en_us/badges/images/generic/pt_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.kishan.exames) For Android 4.1 and above.
+<a href='https://play.google.com/store/apps/details?id=com.kishan.exames&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width="20%" height="20%" alt='Disponível no Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/pt_badge_web_generic.png'/></a> 
+
+<br>Para Versões de android superiores a 4.1
 
 
 ### Version Changelog:
