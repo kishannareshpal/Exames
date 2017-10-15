@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.kishan.exames.ExamesActivity"
-    android:background="@drawable/exames_background_gradient"
+    android:background="@drawable/sixth_b"
 
     fancy:corner_radius="6dp">
 

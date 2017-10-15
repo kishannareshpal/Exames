@@ -47,7 +47,11 @@ public class ExamesGoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         setContentView(R.layout.activity_exames_go);
 
         mInterstitialAd = new InterstitialAd(ExamesGoActivity.this);

@@ -2,6 +2,7 @@ package com.kishan.exames;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -35,7 +36,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         setContentView(R.layout.activity_main);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -49,8 +54,18 @@ public class MainActivity extends AppCompatActivity {
         FlowingGradientClass grad = new FlowingGradientClass();
         grad.setBackgroundResource(R.drawable.translate)
                 .onRelativeLayout(re1)
-                .setTransitionDuration(4000)
-                .start();
+                .setTransitionDuration(4000);
+
+        //check shared Preference (onclick changes teh background)
+        SharedPreferences sharedPreferences = getSharedPreferences("gradToggle", MODE_PRIVATE);
+
+        if(sharedPreferences.getString("check", "").equals("true")){
+            //enable gradient
+            grad.start();
+
+        } else if (sharedPreferences.getString("check", "").equals("false")){
+            //gradient is disabled
+        }
 
 
         //calling Functions:

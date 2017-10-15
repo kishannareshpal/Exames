@@ -2,6 +2,7 @@ package com.kishan.exames;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,6 +10,7 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.Spanned;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -36,7 +38,11 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         setContentView(R.layout.activity_welcome);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -57,13 +63,24 @@ public class WelcomeActivity extends AppCompatActivity {
             btGetStarted = (FancyButton) findViewById(R.id.btGetStarted);
             btAbout = (FancyButton) findViewById(R.id.btAbout);
 
+
             //Call the background for flowing-gradient:
             r1 = (RelativeLayout) findViewById(R.id.r1);
             FlowingGradientClass grad = new FlowingGradientClass();
             grad.setBackgroundResource(R.drawable.translate)
-                .onRelativeLayout(r1)
-                .setTransitionDuration(4000)
-                .start();
+                    .onRelativeLayout(r1)
+                    .setTransitionDuration(4000);
+
+            //check shared Preference (onclick changes teh background)
+            SharedPreferences sharedPreferences = getSharedPreferences("gradToggle", MODE_PRIVATE);
+
+            if(sharedPreferences.getString("check", "").equals("true")){
+                //enable gradient
+                grad.start();
+
+            } else if (sharedPreferences.getString("check", "").equals("false")){
+                //gradient is disabled
+            }
 
 
             //Formatting the button text programatically:

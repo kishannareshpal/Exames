@@ -24,6 +24,7 @@ android {
     packagingOptions {
         pickFirst 'META-INF/LICENSE'
     }
+    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/xml'] } }
 }
 
 dependencies {
@@ -54,7 +55,6 @@ dependencies {
     compile 'com.jcminarro:RoundKornerLayouts:0.2.0'
     compile 'com.github.javiersantos:MaterialStyledDialogs:2.1'
     compile 'com.google.android.gms:play-services-ads:10.0.1'
-    compile 'com.android.support:support-vector-drawable:25.3.1'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.4.0'
 }

@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Environment;
 import android.support.annotation.NonNull;
@@ -106,6 +107,9 @@ public class ExamesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //check shared Preference (onclick changes teh background)
+        SharedPreferences sharedPreferences = getSharedPreferences("gradToggle", MODE_PRIVATE);
+
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
@@ -122,8 +126,17 @@ public class ExamesActivity extends AppCompatActivity {
         FlowingGradientClass grad = new FlowingGradientClass();
         grad.setBackgroundResource(R.drawable.translate)
                 .onRelativeLayout(rel1)
-                .setTransitionDuration(3000)
-                .start();
+                .setTransitionDuration(3000);
+
+
+
+        if(sharedPreferences.getString("check", "").equals("true")){
+            //enable gradient
+            grad.start();
+
+        } else if (sharedPreferences.getString("check", "").equals("false")){
+            //gradient is disabled
+        }
 
 
         //Calling functions:
@@ -340,19 +353,22 @@ public class ExamesActivity extends AppCompatActivity {
                 } else if(spClasse.getSelectedItem().equals("12a Classe") && (spDisciplina.getSelectedItem().equals("Portugues") || spDisciplina.getSelectedItem().equals("Matematica") || spDisciplina.getSelectedItem().equals("Biologia") || spDisciplina.getSelectedItem().equals("Fisica"))  && spAno.getSelectedItem().equals("2016")) {
                     spEpoca.setAdapter(onlyFirst);
 
-                }else if (spClasse.getSelectedItem().equals("10a Classe") && (spDisciplina.getSelectedItem().equals("História")) && spAno.getSelectedItem().equals("2015")){
+                }else if (spClasse.getSelectedItem().equals("10a Classe") && (spDisciplina.getSelectedItem().equals("Historia") || spDisciplina.getSelectedItem().equals("Portugues")) && spAno.getSelectedItem().equals("2015")){
                     spEpoca.setAdapter(onlyFirst);
 
                 } else if(spClasse.getSelectedItem().equals("10a Classe") && (spDisciplina.getSelectedItem().equals("Ingles") || spDisciplina.getSelectedItem().equals("Quimica") || spDisciplina.getSelectedItem().equals("Matematica"))  && spAno.getSelectedItem().equals("2016")) {
                     spEpoca.setAdapter(onlyFirst);
 
                 } else if (spClasse.getSelectedItem().equals("10a Classe") && spDisciplina.getSelectedItem().equals("Biologia") && spAno.getSelectedItem().equals("2009")) {
-                    spEpoca.setAdapter(onlyFirst);
+                    spEpoca.setAdapter(adapterEpoca);
 
                 } else if (spClasse.getSelectedItem().equals("10a Classe") && spDisciplina.getSelectedItem().equals("Fisica") && spAno.getSelectedItem().equals("2010")) {
                     spEpoca.setAdapter(onlyFirst);
 
                 } else if (spClasse.getSelectedItem().equals("10a Classe") && spAno.getSelectedItem().equals("2009")) {
+                    spEpoca.setAdapter(onlySeccond);
+
+                } else if (spClasse.getSelectedItem().equals("12a Classe") && spDisciplina.getSelectedItem().equals("Portugues") && spAno.getSelectedItem().equals("2008")) {
                     spEpoca.setAdapter(onlySeccond);
 
                 } else if (spDisciplina.getSelectedItem().equals("Filosofia") && spAno.getSelectedItem().equals("2003")) {
@@ -678,7 +694,6 @@ public class ExamesActivity extends AppCompatActivity {
                 .setStyle(Style.HEADER_WITH_ICON)
                 .withIconAnimation(false)
                 .setIcon(R.drawable.header_download)
-
                 .show();
 
     }
@@ -725,7 +740,7 @@ public class ExamesActivity extends AppCompatActivity {
     @OnNeverAskAgain({Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE})
     void getFileNever() {
         // If the permission while the NEVER_SHOW was checked, show error toast:
-        Toast.makeText(this, "Permissão foi negada. Vá para as definições deste App para permitir o uso e conseguir baixar o arquivo.", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Permissão foi negada. Vá para as definições deste App para permitir o uso de armazenamento e conseguir baixar o arquivo.", Toast.LENGTH_LONG).show();
     }
 }//end of the activity.
 

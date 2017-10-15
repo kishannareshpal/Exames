@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="meusExamesShortcut"
+        android:enabled="true"
+        android:shortcutShortLabel="@string/meusExamesShortcut_Short"
+        android:shortcutLongLabel="@string/meusExamesShortcut_Long"
+        android:shortcutDisabledMessage="@string/meusExamesShortcut_Disabled"
+        tools:targetApi="n_mr1">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.kishan.exames"
+            android:targetClass="com.kishan.exames.ExamesGoActivity" />
+        <!--<categories android:name="android.shortcut.conversation" />-->
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+</shortcuts>
