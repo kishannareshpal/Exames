@@ -4,7 +4,8 @@
 
 
 ### Download:
-> [![PlayStore](https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png)](https://play.google.com/store/apps/details?id=com.kishan.exames) For Android 4.1 and above.
+<a href='https://play.google.com/store/apps/details?id=com.kishan.exames&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width="20%" height="20%" alt='Disponível no Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/pt_badge_web_generic.png'/></a> 
+Para Versões de android superiores a 4.1
 
 
 ### Version Changelog:
@@ -53,8 +54,8 @@
  > Ans: Not yet :(. The app will automatically find the appropriate one. Which has the most space. 
     
     > The file name will look like this: "Disciplina-Classe-Ano-Epoca.ext". 
-    > E.g: xxxxxx-1xa Classe-201x-x Epoca.pdf 
-    > //Where **X** can be a letter or a number.
+    > E.g: xxxxxx-1xa Classe-yyyy-z Epoca.pdf 
+    > //Where **x** is the subject name, **y** is the year and **z** is the epoca.
  
   > <b> Hint: You can use that location to delete/share/open the file.</b>
 
