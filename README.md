@@ -1,4 +1,12 @@
-# ExamesGithub
+
+
+## AVISO
+–– Esta versão do aplicativo foi arquivada e uma nova versão (Exames 2) está sendo trabalhada em privado.
+–– Este repositório não será mais mexido.
+## FIM DO AVISO
+
+
+# Exames Moçambique (Arquivado)
 
 ![logo.png](/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
 
@@ -58,18 +66,8 @@ Para Versões de android superiores a 4.1
     > //Where **x** is the subject name, **y** is the year and **z** is the epoca.
  
   > <b> Hint: You can use that location to delete/share/open the file.</b>
+  
 
-
-
-### What else can this app do?  
-> It can also calculate your averages if you are into that kind of stuff.
-
-
-### Do you plan to add more features to this app?  
-Yes, i'll be constantly updating this app, fixing bugs (cause you know, bugs are invincible) and hopefully adding/improving some features here and there.
-
-As of now, i'm looking forward to add a feature that let's the user upload an exam that is not yet available on the server. Maybe when v2.0 comes out, it will roll out with this feature.
-
-### Can i (user) help you?
-Yes indeed. You can help me out by reporting bugs and leaving a review in the playsore. Or even making pull requests.
+### Contactos
   > Email: kishan_jadav@hotmail.com
+  > Telefone: 840379185
